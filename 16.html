@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Akhir Semester (UAS) - Bahasa Inggris Kelas X Semester Ganjil</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        luxury: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            gold: '#d4af37',
+                            goldLight: '#f3e5ab',
+                            cream: '#faf9f6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .correct-answer { background-color: #dcfce7 !important; border-color: #22c55e !important; }
+        .wrong-answer { background-color: #fee2e2 !important; border-color: #ef4444 !important; }
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #f3e5ab);
+            z-index: 100;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-luxury-cream text-slate-800 antialiased">
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-dark transition-all duration-300 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl md:text-2xl font-serif font-bold text-gold-gradient tracking-wide">
+                <i class="fas fa-book-open mr-2"></i>B. Inggris Kelas X
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-luxury-gold transition-colors">Beranda</a>
+                <a href="index.html#toc" class="hover:text-luxury-gold transition-colors">Daftar Bab</a>
+                <a href="#ujian" class="hover:text-luxury-gold transition-colors">Mulai Ujian</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header - UAS Special -->
+    <header class="relative pt-32 pb-16 bg-gradient-to-br from-red-900 via-luxury-900 to-luxury-900 text-white overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-luxury-gold/10 to-transparent"></div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 border-2 border-luxury-gold rounded-full"></div>
+            <div class="absolute bottom-10 right-20 w-48 h-48 border-2 border-luxury-gold rounded-full"></div>
+            <div class="absolute top-1/2 left-1/3 w-24 h-24 border-2 border-luxury-gold rounded-full"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10" data-aos="fade-down">
+            <a href="index.html" class="inline-flex items-center text-luxury-gold hover:text-white transition-colors mb-6 text-sm font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i> Kembali ke Daftar Bab
+            </a>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider animate-pulse">
+                    <i class="fas fa-award mr-1"></i> UJIAN RESMI
+                </span>
+                <span class="bg-luxury-gold/20 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-luxury-gold/30">Pertemuan 16</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-4 leading-tight">
+                Ujian Akhir Semester <span class="text-gold-gradient">(UAS)</span>
+            </h1>
+            <p class="text-xl text-luxury-gold font-semibold mb-4">Bahasa Inggris Kelas X — Semester Ganjil</p>
+            <p class="text-slate-300 text-lg max-w-3xl leading-relaxed mb-6">
+                Asesmen Sumatif Akhir Semester yang mencakup seluruh materi dari Pertemuan 1 sampai dengan Pertemuan 15 (tidak termasuk Pertemuan 8/UTS). Ujian ini terdiri dari <strong>50 soal Pilihan Ganda</strong> dengan 5 opsi jawaban (a, b, c, d, e) dan waktu pengerjaan <strong>120 menit</strong>.
+            </p>
+            
+            <!-- Info Box UAS -->
+            <div class="bg-luxury-900/50 backdrop-blur-sm border border-luxury-gold/30 rounded-2xl p-6 max-w-4xl">
+                <div class="grid md:grid-cols-4 gap-4 text-center">
+                    <div>
+                        <i class="fas fa-clipboard-list text-2xl text-luxury-gold mb-2"></i>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider">Jumlah Soal</p>
+                        <p class="text-2xl font-bold text-white">50</p>
+                        <p class="text-xs text-slate-500">Pilihan Ganda (a-e)</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-clock text-2xl text-luxury-gold mb-2"></i>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider">Waktu Pengerjaan</p>
+                        <p class="text-2xl font-bold text-white">120</p>
+                        <p class="text-xs text-slate-500">Menit</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-star text-2xl text-luxury-gold mb-2"></i>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider">Bobot per Soal</p>
+                        <p class="text-2xl font-bold text-white">2</p>
+                        <p class="text-xs text-slate-500">Poin</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-trophy text-2xl text-luxury-gold mb-2"></i>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider">Total Skor</p>
+                        <p class="text-2xl font-bold text-white">100</p>
+                        <p class="text-xs text-slate-500">Poin Maksimal</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="15.html" class="border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:border-luxury-gold hover:text-luxury-gold transition-all duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i> Bab 15: Comprehensive Review
+                </a>
+                <a href="#ujian" class="bg-luxury-gold text-luxury-900 font-bold px-8 py-3 rounded-lg hover:bg-white transition-all duration-300 shadow-lg shadow-luxury-gold/20">
+                    <i class="fas fa-play-circle mr-2"></i> Mulai Ujian
+                </a>
+                <a href="index.html" class="border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:border-luxury-gold hover:text-luxury-gold transition-all duration-300">
+                    Kembali ke Beranda <i class="fas fa-home ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16 max-w-5xl">
+        
+        <!-- Pengantar UAS -->
+        <section class="mb-16" data-aos="fade-up">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-slate-100">
+                <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">
+                    <i class="fas fa-info-circle text-luxury-gold mr-2"></i> Petunjuk Pengerjaan
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="font-bold text-luxury-900 mb-3">📋 Cakupan Materi (13 Pertemuan)</h3>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 1: Introduction (Introducing, Greeting, Opening & Closing)</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 2: Social Expressions (Congratulation, Complimenting, Thanking)</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 3: Comparison (Comparing & Contrasting)</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 4: Opinion (Asking, Giving, Refusing, Agreement, Disagreement)</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 5: Justifying Personal Preferences</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 6: Descriptive Text</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 7: Recount Text</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 9: Narrative Text</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 10: Procedure Text</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 11: Announcement & Invitation</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 12: Caption Text</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 13: Short Functional Texts (Labels, Notices, Warnings)</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 14: Reading Comprehension & Vocabulary</li>
+                            <li class="flex items-start"><span class="text-luxury-gold mr-2">●</span> Pertemuan 15: Comprehensive Review</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-luxury-900 mb-3">⚠️ Ketentuan Ujian</h3>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-start"><span class="text-red-500 mr-2">✓</span> Isi data diri dengan lengkap dan benar</li>
+                            <li class="flex items-start"><span class="text-red-500 mr-2">✓</span> Jawab semua 50 soal pilihan ganda</li>
+                            <li class="flex items-start"><span class="text-red-500 mr-2">✓</span> Setiap soal memiliki 5 opsi (a, b, c, d, e)</li>
+                            <li class="flex items-start"><span class="text-red-500 mr-2">✓</span> Pilih satu jawaban yang paling tepat</li>
+                            <li class="flex items-start"><span class="text-red-500 mr-2">✓</span> Kerjakan secara mandiri dan jujur</li>
+                            <li class="flex items-start"><span class="text-red-500 mr-2">✓</span> Klik "Hitung Skor" setelah selesai</li>
+                            <li class="flex items-start"><span class="text-red-500 mr-2">✓</span> Kirim hasil ke guru melalui tombol yang tersedia</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-xl">
+                    <p class="text-sm text-yellow-800"><i class="fas fa-exclamation-triangle mr-2"></i> <strong>Peringatan:</strong> Segala bentuk kecurangan akan mengakibatkan pembatalan nilai. Kerjakan dengan integritas dan percaya pada kemampuan diri Anda. UAS ini mencakup seluruh materi semester ganjil — pelajari kembali semua bab sebelum mengerjakan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- UJIAN AKHIR SEMESTER -->
+        <!-- ========================================================== -->
+        <section id="ujian" class="border-t-4 border-luxury-gold pt-12" data-aos="fade-up">
+            <div class="text-center mb-10">
+                <span class="bg-red-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Asesmen Sumatif Akhir</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-luxury-900 mt-4">📝 Soal Ujian Akhir Semester</h2>
+                <p class="text-slate-600 mt-2 max-w-2xl mx-auto">50 Soal Pilihan Ganda (5 opsi: a, b, c, d, e) — Bobot 2 poin per soal</p>
+            </div>
+
+            <form id="quizForm" class="max-w-4xl mx-auto space-y-8">
+                
+                <!-- Data Siswa -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-6 flex items-center">
+                        <i class="fas fa-user-graduate text-luxury-gold mr-3"></i> Data Peserta Ujian
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" id="nama" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" id="nis" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                            <input type="date" id="tanggal" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <select id="kelas" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                                <option value="">Pilih Kelas</option>
+                                <option value="X TKJ 1">X TKJ 1</option>
+                                <option value="X TKJ 2">X TKJ 2</option>
+                                <option value="X AKL 1">X AKL 1</option>
+                                <option value="X AKL 2">X AKL 2</option>
+                                <option value="X OTKP 1">X OTKP 1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select id="semester" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                                <option value="Semester 1 (Ganjil)">Semester 1 (Ganjil)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Mata Pelajaran</label>
+                            <input type="text" value="Bahasa Inggris" readonly class="w-full px-4 py-2 border border-slate-300 rounded-lg bg-slate-100 text-slate-600">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOAL UAS -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-2 flex items-center">
+                        <i class="fas fa-list-ol text-luxury-gold mr-3"></i> SOAL PILIHAN GANDA
+                    </h3>
+                    <p class="text-sm text-slate-500 mb-6">Pilih satu jawaban yang paling tepat (a, b, c, d, atau e).</p>
+                    <p class="text-red-600 text-sm mb-6 font-semibold"><i class="fas fa-exclamation-circle mr-1"></i> Mohon lengkapi semua 50 soal sebelum menghitung skor!</p>
+
+                    <div class="space-y-6" id="mcq-container">
+                        
+                        <!-- ===================== PERTEMUAN 1: INTRODUCTION (Soal 1-4) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 1 — INTRODUCTION</span>
+                        </div>
+
+                        <!-- Soal 1 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">1. Ungkapan yang paling tepat untuk menyapa guru di pagi hari secara formal adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. What's up, Bro?</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Good morning, Sir/Ma'am.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Hey, how's it going?</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. See you later!</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Long time no see!</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">2. "How do you do?" adalah ungkapan yang digunakan saat...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Berpisah dengan teman dekat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Menanyakan kabar teman yang sakit</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Pertama kali bertemu seseorang dalam situasi formal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Menolak ajakan seseorang</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Memberikan ucapan selamat</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">3. Respon yang paling tepat untuk "Nice to meet you" adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Nice to meet you too.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. I'm fine, thank you.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. You're welcome.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. I don't think so.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Congratulations!</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">4. Manakah di bawah ini yang merupakan ungkapan <em>Closing Conversation</em>?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. May I introduce myself?</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. How do you do?</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Let me tell you about...</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. I should get going now. See you!</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Excuse me, do you have a minute?</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 2: SOCIAL EXPRESSIONS (Soal 5-8) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 2 — SOCIAL EXPRESSIONS</span>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">5. Ungkapan yang paling tepat untuk memberi pujian tulus atas hasil kerja rekan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Your work is good, for someone who never studies.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Your presentation was very clear and well-organized. Great job!</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. I can do that much better than you.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Finally, you got it right.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. You look so much better today than yesterday.</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">6. "Please accept my warmest congratulations on your graduation." Ungkapan ini termasuk...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Informal Thanking</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Informal Congratulation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Formal Congratulation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Apologizing</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Giving opinion</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">7. Respon yang paling sopan dan umum untuk ucapan "Thank you for your help" adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. You are very welcome.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. No, I don't like it.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Congratulations!</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. I disagree with you.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. I'm not sure about that.</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">8. Menurut Speech Act Theory, ucapan selamat dan terima kasih termasuk dalam jenis tindak tutur...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Directive</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Commissive</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Declaration</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Expressive</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Representative</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 3: COMPARISON (Soal 9-12) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 3 — COMPARISON</span>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">9. Bentuk comparative dari kata sifat "beautiful" adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. beautifuller</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. more beautiful</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. most beautiful</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. as beautiful</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. beautifulest</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">10. "Andi is _____ tall _____ Budi." Ungkapan yang tepat untuk melengkapi kalimat tersebut adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. taller / than</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. the tallest / in</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. as / as</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. more / than</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. so / that</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 11 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">11. Kata penghubung yang digunakan untuk menunjukkan <em>perbedaan</em> (contrasting) adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q11" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. whereas</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q11" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. similarly</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q11" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. likewise</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q11" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. both...and...</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q11" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. the same as</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 12 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">12. "Rendang is _____ dish in Indonesia." Bentuk superlative yang tepat adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q12" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. popular</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q12" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. more popular</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q12" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. popularest</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q12" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. the most popular</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q12" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. as popular as</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 4: OPINION (Soal 13-16) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 4 — OPINION</span>
+                        </div>
+
+                        <!-- Soal 13 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">13. Ungkapan yang digunakan untuk meminta pendapat orang lain adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q13" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. I think that...</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q13" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. What do you think about...?</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q13" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. I completely agree.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q13" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. That's not how I see it.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q13" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. I'm not sure about that.</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 14 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">14. "In my opinion, learning English is essential for SMK students." Ungkapan ini termasuk dalam kategori...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q14" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Giving opinion</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q14" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Asking opinion</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q14" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Refusing opinion</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q14" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Clarification</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q14" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Follow up</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 15 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">15. "I couldn't agree more." adalah ungkapan untuk...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q15" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Disagreement</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q15" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Clarification</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q15" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Follow up</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q15" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Agreement</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q15" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Refusing opinion</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 16 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">16. "I see your point, but I have a different perspective." adalah ungkapan...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q16" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Agreement</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q16" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Disagreement</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q16" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Giving opinion</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q16" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Asking opinion</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q16" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Follow up</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 5: PERSONAL PREFERENCES (Soal 17-19) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 5 — JUSTIFYING PERSONAL PREFERENCES</span>
+                        </div>
+
+                        <!-- Soal 17 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">17. Ungkapan yang paling tepat untuk menyatakan preferensi yang kuat adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q17" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. I don't mind coffee.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q17" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. I'm passionate about graphic design.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q17" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. It's okay.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q17" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. I quite like it.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q17" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. I'm not really into it.</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 18 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">18. "I prefer tea _____ coffee." Kata yang tepat untuk melengkapi kalimat tersebut adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q18" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. than</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q18" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. over</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q18" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. to</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q18" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. from</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q18" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. as</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 19 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">19. "I'd rather walk _____ drive." Kata yang tepat adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q19" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. to</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q19" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. over</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q19" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. from</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q19" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. than</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q19" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. as</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 6: DESCRIPTIVE TEXT (Soal 20-23) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 6 — DESCRIPTIVE TEXT</span>
+                        </div>
+
+                        <!-- Soal 20 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">20. Tujuan komunikatif dari Descriptive Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q20" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. To tell a story with complication and resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q20" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. To describe a particular person, place, or thing in detail</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q20" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. To explain how to make or do something</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q20" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. To retell past events for the purpose of informing</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q20" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. To persuade the reader to do something</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 21 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">21. Struktur umum (generic structure) Descriptive Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q21" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Identification + Description</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q21" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Orientation + Complication + Resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q21" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Goal + Materials + Steps</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q21" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. General Classification + Description</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q21" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Orientation + Events + Reorientation</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 22 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">22. Ciri kebahasaan Descriptive Text yang benar adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q22" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Menggunakan past tense dan general participant</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q22" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Menggunakan future tense dan abstract noun</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q22" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Menggunakan simple present tense, specific participant, dan banyak adjectives</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q22" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Menggunakan imperative sentences dan technical terms</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q22" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Menggunakan past tense dan temporal conjunctions</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 23 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">23. Manakah kalimat yang menggunakan <em>specific participant</em> (ciri Descriptive Text)?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q23" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Cats are cute animals.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q23" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. My cat Milo has fluffy white fur.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q23" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. A cat usually sleeps 16 hours a day.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q23" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. All cats love to eat fish.</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q23" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Tigers are dangerous predators.</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 7: RECOUNT TEXT (Soal 24-27) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 7 — RECOUNT TEXT</span>
+                        </div>
+
+                        <!-- Soal 24 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">24. Tujuan komunikatif dari Recount Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q24" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. To describe a particular person or place in detail</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q24" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. To retell past events for the purpose of informing or entertaining</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q24" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. To explain how to make or do something</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q24" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. To persuade the reader to do something</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q24" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. To amuse the reader with a complication</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 25 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">25. Struktur umum (generic structure) Recount Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q25" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Orientation → Events → Reorientation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q25" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Orientation → Complication → Resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q25" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Goal → Materials → Steps</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q25" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Identification → Description</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q25" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. General Classification → Description</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 26 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">26. Tenses yang dominan digunakan dalam Recount Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q26" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Simple Present Tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q26" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Present Continuous Tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q26" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Simple Past Tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q26" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Future Tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q26" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Present Perfect Tense</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 27 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">27. Perbedaan utama antara Recount Text dan Narrative Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q27" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Recount Text menggunakan past tense, Narrative menggunakan present tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q27" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Recount Text menceritakan peristiwa nyata tanpa konflik, Narrative Text memiliki konflik dan resolusi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q27" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Recount Text untuk hiburan, Narrative untuk informasi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q27" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Tidak ada perbedaan, keduanya sama</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q27" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Recount Text menggunakan simple present, Narrative menggunakan past tense</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 9: NARRATIVE TEXT (Soal 28-31) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 9 — NARRATIVE TEXT</span>
+                        </div>
+
+                        <!-- Soal 28 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">28. Tujuan komunikatif dari Narrative Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q28" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. To describe a particular person or place in detail</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q28" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. To amuse or entertain readers with a story that has complications</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q28" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. To explain how to make or do something</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q28" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. To retell past events for the purpose of informing</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q28" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. To persuade the reader to do something</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 29 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">29. Struktur umum (generic structure) Narrative Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q29" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Orientation → Complication → Resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q29" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Orientation → Events → Reorientation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q29" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Goal → Materials → Steps</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q29" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Identification → Description</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q29" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. General Classification → Description</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 30 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">30. Cerita tentang asal-usul suatu tempat (misalnya "Danau Toba") termasuk jenis Narrative Text...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q30" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Fable</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q30" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Legend</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q30" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Fairy Tale</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q30" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Myth</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q30" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Romance</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 31 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">31. Cerita dengan tokoh hewan yang berperilaku seperti manusia dan mengandung pesan moral disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q31" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Legend</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q31" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Myth</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q31" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Fable</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q31" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Fairy Tale</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q31" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Folktale</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 10: PROCEDURE TEXT (Soal 32-35) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 10 — PROCEDURE TEXT</span>
+                        </div>
+
+                        <!-- Soal 32 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">32. Tujuan komunikatif dari Procedure Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q32" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. To describe a particular person or place in detail</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q32" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. To explain how to make or do something through a sequence of steps</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q32" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. To retell past events for the purpose of entertaining</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q32" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. To amuse the reader with a story</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q32" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. To persuade the reader to buy a product</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 33 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">33. Struktur umum (generic structure) Procedure Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q33" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Goal → Materials → Steps</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q33" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Orientation → Complication → Resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q33" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Identification → Description</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q33" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Orientation → Events → Reorientation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q33" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. General Classification → Description</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 34 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">34. "Boil the water and pour it into the cup." Kalimat ini merupakan contoh dari...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q34" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Declarative sentence</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q34" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Interrogative sentence</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q34" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Exclamatory sentence</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q34" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Imperative sentence</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q34" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Negative sentence</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 35 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">35. Kata-kata seperti <em>"first, then, next, finally"</em> dalam Procedure Text disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q35" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Action verbs</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q35" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Temporal conjunctions</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q35" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Adjectives</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q35" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Pronouns</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q35" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Prepositions</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 11: ANNOUNCEMENT & INVITATION (Soal 36-39) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 11 — ANNOUNCEMENT & INVITATION</span>
+                        </div>
+
+                        <!-- Soal 36 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">36. Tujuan komunikatif dari Announcement adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q36" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. To amuse the readers with a story</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q36" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. To inform people about something important that has happened, is happening, or will happen</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q36" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. To describe a particular person or place</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q36" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. To explain how to make something</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q36" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. To persuade people to buy a product</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 37 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">37. "You are cordially invited to attend..." adalah ungkapan yang biasanya ditemukan dalam...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q37" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Informal invitation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q37" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Announcement</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q37" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Procedure text</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q37" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Formal invitation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q37" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Descriptive text</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 38 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">38. "Thank you for the invitation. Unfortunately, I have a prior commitment." adalah contoh dari...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q38" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Declining an invitation politely (menolak dengan sopan)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q38" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Accepting an invitation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q38" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Making an announcement</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q38" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Giving an opinion</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q38" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Asking for clarification</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 39 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">39. "RSVP" dalam invitation singkatan dari bahasa Perancis <em>"Répondez s'il vous plaît"</em> yang artinya...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q39" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Bring your own food</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q39" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Please respond (konfirmasi kehadiran)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q39" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Come on time</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q39" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Wear formal clothes</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q39" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. No gifts please</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 12: CAPTION TEXT (Soal 40-43) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 12 — CAPTION TEXT</span>
+                        </div>
+
+                        <!-- Soal 40 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">40. Tujuan komunikatif dari Caption Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q40" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. To tell a story with complication and resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q40" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. To describe, inform, or provide context for a visual image</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q40" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. To explain how to make or do something</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q40" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. To retell past events for the purpose of informing</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q40" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. To persuade the reader to buy a product</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 41 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">41. Struktur umum (generic structure) Caption Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q41" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Identifier + Description + Additional Details</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q41" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Orientation → Complication → Resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q41" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Goal → Materials → Steps</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q41" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Identification → Description</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q41" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Orientation → Events → Reorientation</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 42 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">42. Caption untuk foto di Instagram yang menggunakan emoji dan hashtag termasuk jenis...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q42" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. News Caption</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q42" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Product Caption</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q42" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Social Media Caption</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q42" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Illustration Caption</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q42" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Photo Caption (koran)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 43 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">43. Menurut Barthes (1977), caption text berfungsi sebagai <em>anchorage</em>, yang berarti...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q43" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Menghilangkan makna gambar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q43" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Membuat gambar menjadi lebih indah</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q43" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Mengubah gambar menjadi teks</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q43" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Mengarahkan pembaca untuk menafsirkan gambar dengan cara tertentu (menambat makna)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q43" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Menghapus interpretasi pembaca</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 13: SHORT FUNCTIONAL TEXTS (Soal 44-46) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 13 — SHORT FUNCTIONAL TEXTS</span>
+                        </div>
+
+                        <!-- Soal 44 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">44. Teks pendek seperti label, notice, warning, dan short message termasuk dalam kategori...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q44" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Literary texts (teks sastra)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q44" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Short functional texts (teks fungsional pendek)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q44" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Academic essays (esai akademik)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q44" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. News articles (artikel berita)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q44" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Research papers (makalah penelitian)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 45 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">45. "CAUTION: Wet Floor. Please walk carefully." adalah contoh dari...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q45" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Label (produk)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q45" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Invitation (undangan)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q45" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Warning (peringatan)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q45" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Announcement (pengumuman)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q45" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Procedure (prosedur)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 46 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">46. "Keep refrigerated. Best before: 15/12/2026." adalah contoh dari...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q46" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Label (pada kemasan produk)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q46" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Notice (pengumuman resmi)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q46" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Warning (peringatan bahaya)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q46" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Short message (pesan singkat)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q46" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Caption (keterangan gambar)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 14: READING & VOCABULARY (Soal 47-48) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 14 — READING COMPREHENSION & VOCABULARY</span>
+                        </div>
+
+                        <!-- Soal 47 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">47. Bacalah teks berikut!<br><br><em>"Rendang is a Minangkabau dish that consists of meat cooked in coconut milk and spices. It is known for its rich flavor and long shelf life. In 2011, rendang was voted as the world's most delicious food by CNN International."</em><br><br>Kata <em>"shelf life"</em> dalam teks di atas berarti...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q47" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Umur simpan (daya tahan makanan)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q47" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Harga jual</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q47" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Cara memasak</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q47" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Bahan baku</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q47" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Tempat penjualan</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 48 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">48. Sinonim dari kata <em>"delicious"</em> dalam bahasa Inggris adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q48" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Bitter</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q48" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Spicy</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q48" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Tasty</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q48" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Sour</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q48" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Salty</span></label>
+                            </div>
+                        </div>
+
+                        <!-- ===================== PERTEMUAN 15: COMPREHENSIVE REVIEW (Soal 49-50) ===================== -->
+                        <div class="border-b-2 border-luxury-gold/30 pb-2 mb-4 mt-8">
+                            <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full">PERTEMUAN 15 — COMPREHENSIVE REVIEW</span>
+                        </div>
+
+                        <!-- Soal 49 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">49. Manakah di bawah ini yang merupakan perbedaan utama antara <em>Descriptive Text</em> dan <em>Report Text</em>?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q49" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Descriptive Text menggambarkan objek spesifik, Report Text menggambarkan objek secara umum</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q49" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Descriptive Text menggunakan past tense, Report Text menggunakan present tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q49" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Descriptive Text untuk hiburan, Report Text untuk informasi ilmiah</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q49" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Tidak ada perbedaan, keduanya sama</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q49" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Descriptive Text lebih panjang daripada Report Text</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 50 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">50. Berdasarkan seluruh materi semester ganjil, manakah pernyataan yang paling tepat tentang hubungan antara berbagai jenis teks yang telah dipelajari?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q50" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Semua jenis teks memiliki struktur dan tujuan yang sama</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q50" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Hanya Narrative Text yang memiliki konflik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q50" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Setiap jenis teks memiliki tujuan komunikatif, struktur, dan ciri kebahasaan yang khas sesuai fungsinya</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q50" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Procedure Text dan Recount Text memiliki struktur yang sama</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q50" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Descriptive Text dan Narrative Text sama-sama menggunakan past tense</span></label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Hasil & Aksi -->
+                <div class="bg-luxury-900 text-white p-8 rounded-2xl shadow-xl border border-luxury-gold/30 text-center">
+                    <h3 class="text-2xl font-serif font-bold text-luxury-gold mb-4">📊 Hasil Ujian Akhir Semester</h3>
+                    <div class="text-5xl font-bold text-white mb-2" id="totalScore">0</div>
+                    <p class="text-slate-400 mb-2 text-sm">Skor Pilihan Ganda: <span id="mcqScore">0</span>/100</p>
+                    <p class="text-slate-400 mb-6 text-xs">Jumlah Benar: <span id="correctCount">0</span>/50 | Jumlah Salah: <span id="wrongCount">0</span>/50</p>
+                    
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <button type="button" onclick="hitungSkor()" class="bg-luxury-gold text-luxury-900 font-bold px-8 py-3 rounded-lg hover:bg-white transition-all duration-300 shadow-lg">
+                            <i class="fas fa-calculator mr-2"></i> Hitung Skor & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="border border-luxury-gold text-luxury-gold font-bold px-8 py-3 rounded-lg hover:bg-luxury-gold hover:text-luxury-900 transition-all duration-300">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Hasil ke Guru
+                        </button>
+                        <button type="button" onclick="window.print()" class="border border-slate-600 text-slate-300 font-semibold px-8 py-3 rounded-lg hover:border-white hover:text-white transition-all duration-300">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh / Cetak PDF
+                        </button>
+                        <button type="button" onclick="resetForm()" class="border border-red-500 text-red-400 font-semibold px-8 py-3 rounded-lg hover:bg-red-500 hover:text-white transition-all duration-300">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-6 italic">* Hasil ujian ini akan menjadi bagian dari nilai UAS Anda. Pastikan jawaban sudah benar sebelum dikirim.</p>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- Footer Navigation -->
+        <div class="flex justify-between items-center mt-16 pt-8 border-t border-slate-200">
+            <a href="15.html" class="text-luxury-900 font-semibold hover:text-luxury-gold transition flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Bab 15: Comprehensive Review
+            </a>
+            <a href="index.html" class="bg-luxury-900 text-white px-6 py-3 rounded-lg hover:bg-luxury-gold hover:text-luxury-900 transition flex items-center font-semibold">
+                Kembali ke Beranda <i class="fas fa-home ml-2"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-900 text-slate-400 py-10 border-t border-slate-800 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2">&copy; 2026 VERA SEPTIA FITRI, S.Pd — SMK N 1 KOTO BALINGKA</p>
+            <p class="text-sm text-slate-500">Email: <a href="mailto:ve.veraseptiafitri@gmail.com" class="hover:text-luxury-gold transition">ve.veraseptiafitri@gmail.com</a></p>
+            <p class="text-xs text-slate-600 mt-4 italic">"The expert in anything was once a beginner." — Helen Hayes</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Kunci Jawaban UAS (50 Soal)
+        const correctAnswers = {
+            // Pertemuan 1: Introduction
+            q1: 'b', q2: 'c', q3: 'a', q4: 'd',
+            // Pertemuan 2: Social Expressions
+            q5: 'b', q6: 'c', q7: 'a', q8: 'd',
+            // Pertemuan 3: Comparison
+            q9: 'b', q10: 'c', q11: 'a', q12: 'd',
+            // Pertemuan 4: Opinion
+            q13: 'b', q14: 'a', q15: 'd', q16: 'b',
+            // Pertemuan 5: Personal Preferences
+            q17: 'b', q18: 'c', q19: 'd',
+            // Pertemuan 6: Descriptive Text
+            q20: 'b', q21: 'a', q22: 'c', q23: 'b',
+            // Pertemuan 7: Recount Text
+            q24: 'b', q25: 'a', q26: 'c', q27: 'b',
+            // Pertemuan 9: Narrative Text
+            q28: 'b', q29: 'a', q30: 'b', q31: 'c',
+            // Pertemuan 10: Procedure Text
+            q32: 'b', q33: 'a', q34: 'd', q35: 'b',
+            // Pertemuan 11: Announcement & Invitation
+            q36: 'b', q37: 'd', q38: 'a', q39: 'b',
+            // Pertemuan 12: Caption Text
+            q40: 'b', q41: 'a', q42: 'c', q43: 'd',
+            // Pertemuan 13: Short Functional Texts
+            q44: 'b', q45: 'c', q46: 'a',
+            // Pertemuan 14: Reading & Vocabulary
+            q47: 'a', q48: 'c',
+            // Pertemuan 15: Comprehensive Review
+            q49: 'a', q50: 'c'
+        };
+
+        // Progress Bar
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        });
+
+        function hitungSkor() {
+            // Validasi Data Siswa
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const kelas = document.getElementById('kelas').value;
+
+            if (!nama || !nis || !tanggal || !kelas) {
+                alert("⚠️ Mohon lengkapi semua Data Peserta Ujian terlebih dahulu!");
+                return;
+            }
+
+            // Validasi Pilihan Ganda
+            let mcqScore = 0;
+            let correctCount = 0;
+            let wrongCount = 0;
+            let allMcqAnswered = true;
+            
+            for (let i = 1; i <= 50; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const questionDiv = document.querySelector(`input[name="q${i}"]`).closest('div[data-correct]');
+                
+                // Reset classes
+                questionDiv.classList.remove('correct-answer', 'wrong-answer');
+                
+                if (selected) {
+                    if (selected.value === correctAnswers[`q${i}`]) {
+                        mcqScore += 2;
+                        correctCount++;
+                        questionDiv.classList.add('correct-answer');
+                    } else {
+                        wrongCount++;
+                        questionDiv.classList.add('wrong-answer');
+                    }
+                } else {
+                    allMcqAnswered = false;
+                }
+            }
+
+            if (!allMcqAnswered) {
+                alert("⚠️ Mohon lengkapi semua 50 soal pilihan ganda terlebih dahulu!");
+                return;
+            }
+
+            // Tampilkan Hasil
+            document.getElementById('mcqScore').innerText = mcqScore;
+            document.getElementById('totalScore').innerText = mcqScore;
+            document.getElementById('correctCount').innerText = correctCount;
+            document.getElementById('wrongCount').innerText = wrongCount;
+            
+            // Scroll ke hasil
+            document.getElementById('totalScore').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Pesan berdasarkan nilai
+            let message = "";
+            if (mcqScore >= 85) {
+                message = "🏆 LUAR BIASA! Selamat, Anda telah menguasai materi dengan sangat baik!";
+            } else if (mcqScore >= 75) {
+                message = "👏 BAGUS! Pertahankan dan tingkatkan terus!";
+            } else if (mcqScore >= 60) {
+                message = "👍 CUKUP. Perbanyak latihan dan review materi!";
+            } else {
+                message = "📚 PERLU BELAJAR LAGI. Jangan menyerah, ulangi materi dari awal!";
+            }
+            
+            alert(`✅ Perhitungan Selesai!\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\n\nSkor UAS: ${mcqScore}/100\nJumlah Benar: ${correctCount}/50\nJumlah Salah: ${wrongCount}/50\n\n${message}\n\nSilakan klik "Kirim Hasil ke Guru" atau "Unduh / Cetak PDF".`);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const mcqScore = document.getElementById('mcqScore').innerText;
+            const correctCount = document.getElementById('correctCount').innerText;
+            const wrongCount = document.getElementById('wrongCount').innerText;
+
+            if (mcqScore === "0") {
+                alert("⚠️ Silakan hitung skor terlebih dahulu sebelum mengirim!");
+                return;
+            }
+
+            const subject = `Hasil UAS Bahasa Inggris Kelas X - ${nama} (${kelas})`;
+            const body = `Yth. Ibu VERA SEPTIA FITRI, S.Pd,\n\nBerikut adalah hasil Ujian Akhir Semester (UAS) Bahasa Inggris Kelas X Semester Ganjil saya:\n\n=== DATA PESERTA ===\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nTanggal Ujian: ${tanggal}\n\n=== HASIL UJIAN ===\nSkor Pilihan Ganda: ${mcqScore}/100\nJumlah Benar: ${correctCount}/50\nJumlah Salah: ${wrongCount}/50\n\nMateri yang diujikan (13 Pertemuan):\n- Pertemuan 1: Introduction\n- Pertemuan 2: Social Expressions\n- Pertemuan 3: Comparison\n- Pertemuan 4: Opinion\n- Pertemuan 5: Justifying Personal Preferences\n- Pertemuan 6: Descriptive Text\n- Pertemuan 7: Recount Text\n- Pertemuan 9: Narrative Text\n- Pertemuan 10: Procedure Text\n- Pertemuan 11: Announcement & Invitation\n- Pertemuan 12: Caption Text\n- Pertemuan 13: Short Functional Texts\n- Pertemuan 14: Reading Comprehension & Vocabulary\n- Pertemuan 15: Comprehensive Review\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:ve.veraseptiafitri@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if(confirm("⚠️ Apakah Anda yakin ingin mengosongkan semua jawaban dan mulai ulang?\n\nTindakan ini tidak dapat dibatalkan!")) {
+                document.getElementById("quizForm").reset();
+                document.getElementById('mcqScore').innerText = "0";
+                document.getElementById('totalScore').innerText = "0";
+                document.getElementById('correctCount').innerText = "0";
+                document.getElementById('wrongCount').innerText = "0";
+                
+                // Hapus highlight warna
+                document.querySelectorAll('[data-correct]').forEach(div => {
+                    div.classList.remove('correct-answer', 'wrong-answer');
+                });
+                
+                window.scrollTo({ top: document.getElementById('ujian').offsetTop, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
