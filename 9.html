@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 9: Narrative Text - Bahasa Inggris Kelas X</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        luxury: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            gold: '#d4af37',
+                            goldLight: '#f3e5ab',
+                            cream: '#faf9f6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .correct-answer { background-color: #dcfce7 !important; border-color: #22c55e !important; }
+        .wrong-answer { background-color: #fee2e2 !important; border-color: #ef4444 !important; }
+    </style>
+</head>
+<body class="bg-luxury-cream text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-dark transition-all duration-300 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl md:text-2xl font-serif font-bold text-gold-gradient tracking-wide">
+                <i class="fas fa-book-open mr-2"></i>B. Inggris Kelas X
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-luxury-gold transition-colors">Beranda</a>
+                <a href="index.html#about" class="hover:text-luxury-gold transition-colors">Tentang</a>
+                <a href="index.html#toc" class="hover:text-luxury-gold transition-colors">Daftar Bab</a>
+                <a href="index.html#author" class="hover:text-luxury-gold transition-colors">Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="relative pt-32 pb-16 bg-luxury-900 text-white overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-luxury-gold/10 to-transparent"></div>
+        <div class="container mx-auto px-6 relative z-10" data-aos="fade-down">
+            <a href="index.html" class="inline-flex items-center text-luxury-gold hover:text-white transition-colors mb-6 text-sm font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i> Kembali ke Daftar Bab
+            </a>
+            <span class="bg-luxury-gold/20 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-luxury-gold/30">Pertemuan 9</span>
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6 leading-tight">
+                Bab 9: <span class="text-gold-gradient">Narrative Text</span>
+            </h1>
+            <p class="text-slate-300 text-lg max-w-3xl leading-relaxed">
+                Menjelajahi dunia imajinasi melalui <em>Narrative Text</em> — teks yang menceritakan kisah fiktif atau legenda dengan konflik yang menegangkan dan resolusi yang memuaskan. Menguasai fabel, legenda, mite, dan dongeng sebagai warisan budaya sekaligus sarana pengembangan kreativitas dan berpikir kritis.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="8.html" class="border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:border-luxury-gold hover:text-luxury-gold transition-all duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i> UTS (Pertemuan 8)
+                </a>
+                <a href="#sub1" class="bg-luxury-gold text-luxury-900 font-bold px-6 py-3 rounded-lg hover:bg-white transition-all duration-300 shadow-lg shadow-luxury-gold/20">
+                    <i class="fas fa-book-reader mr-2"></i> Mulai Membaca
+                </a>
+                <a href="10.html" class="border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:border-luxury-gold hover:text-luxury-gold transition-all duration-300">
+                    Bab Selanjutnya <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="sub1" class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">Pendahuluan</h2>
+            <p class="text-slate-600 leading-relaxed mb-4 text-justify">
+                Sejak zaman dahulu, manusia selalu senang bercerita. Dari dongeng yang diceritakan nenek sebelum tidur, legenda tentang asal-usul suatu tempat, hingga film-film Hollywood yang kita tonton di bioskop — semuanya adalah bentuk <strong>Narrative Text</strong>. Narasi adalah cara paling alami bagi manusia untuk memahami dunia, karena otak kita secara biologis dirancang untuk memproses informasi dalam bentuk cerita.
+            </p>
+            <p class="text-slate-600 leading-relaxed mb-6 text-justify">
+                Dalam pembelajaran bahasa Inggris, <em>Narrative Text</em> memiliki posisi istimewa. Selain melatih penguasaan <em>past tense</em>, kosakata deskriptif, dan keterampilan membaca, teks naratif juga mengembangkan <strong>kemampuan berpikir kritis</strong>, <strong>empati</strong>, dan <strong>apresiasi budaya</strong>. Bagi siswa SMK, memahami naratif juga berguna untuk dunia kerja: kemampuan <em>storytelling</em> kini menjadi keterampilan penting dalam presentasi, pemasaran, branding, dan komunikasi profesional.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl my-8">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-lightbulb mr-2"></i>🔑 Konsep Kunci</h3>
+                <ul class="list-disc list-inside text-blue-800 space-y-2 text-sm">
+                    <li><strong>Purpose:</strong> To amuse or entertain readers/listeners with a story that has complications and resolutions.</li>
+                    <li><strong>Generic Structure:</strong> Orientation (pengenalan) → Complication (konflik muncul) → Resolution (konflik terselesaikan) → (Reorientation/Coda — opsional).</li>
+                    <li><strong>Language Features:</strong> Simple past tense, action verbs, time connectives (<em>once upon a time, one day, finally</em>), direct speech, specific characters.</li>
+                    <li><strong>Types of Narrative:</strong> Fable, Legend, Myth, Fairy Tale, Folktale, Romance, Mystery.</li>
+                    <li><strong>Moral Value:</strong> Pesan moral atau pelajaran hidup yang tersirat dalam cerita.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-16" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-panel p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-xl font-serif font-bold text-luxury-900 mb-4"><i class="fas fa-search text-luxury-gold mr-2"></i>📖 Studi Kasus 9: Cerita yang Membosankan</h3>
+                <p class="text-slate-600 mb-4 italic">
+                    "Dalam tugas menulis cerita, seorang siswa menulis: 'Once upon a time, there was a rabbit. The rabbit lived in the forest. The rabbit ate carrots. The rabbit slept. The end.' Gurunya memberikan nilai rendah karena cerita tersebut tidak memiliki konflik, tidak ada ketegangan, dan tidak ada resolusi. Pembaca tidak merasa tertarik atau terhibur sama sekali."
+                </p>
+                <div class="bg-luxury-gold/10 p-4 rounded-lg border border-luxury-gold/30">
+                    <p class="text-sm text-luxury-900 font-semibold">💡 Pembelajaran:</p>
+                    <p class="text-sm text-slate-700 mt-1">
+                        Narrative Text yang efektif harus memiliki <strong>konflik yang jelas</strong> (masalah yang harus dipecahkan oleh tokoh) dan <strong>resolusi yang memuaskan</strong> (penyelesaian konflik). Tanpa konflik, cerita hanyalah daftar peristiwa biasa (yang lebih cocok menjadi Recount Text). Contoh perbaikan: "Once upon a time, there was a clever rabbit who lived in a forest. One day, a hungry wolf tried to catch him. The rabbit used his wit to escape by tricking the wolf into falling into a deep well. From then on, the rabbit lived peacefully, proving that intelligence is more powerful than physical strength."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">9.1 Landasan Teoretis</h2>
+            <p class="text-slate-600 mb-6">Pemahaman teori membantu siswa menyadari <em>mengapa</em> Narrative Text memiliki struktur dan ciri kebahasaan tertentu.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Labov's Narrative Structure (1972)</h4>
+                    <p class="text-sm text-slate-600">William Labov mengembangkan model struktur naratif yang terdiri dari enam elemen: <em>Abstract, Orientation, Complicating Action, Evaluation, Resolution,</em> dan <em>Coda</em>. Model ini menjelaskan bagaimana cerita yang baik selalu memiliki titik balik (complication) dan penyelesaian (resolution) yang memberikan makna.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Propp's Morphology of the Folktale (1928)</h4>
+                    <p class="text-sm text-slate-600">Vladimir Propp menganalisis ratusan cerita rakyat Rusia dan menemukan bahwa semua cerita memiliki <strong>31 fungsi naratif</strong> yang sama (seperti "pahlawan menerima misi", "pahlawan melawan penjahat", "pahlawan menang"). Teori ini membuktikan bahwa narasi memiliki pola universal yang melintasi budaya.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Systemic Functional Linguistics (Halliday, 1978)</h4>
+                    <p class="text-sm text-slate-600">Menurut Halliday, Narrative Text menjalankan fungsi <em>ideational</em> (menceritakan pengalaman) dan <em>interpersonal</em> (membangun hubungan emosional dengan pembaca). Struktur <em>Orientation → Complication → Resolution</em> adalah cara bahasa mengorganisir pengalaman menjadi cerita yang bermakna.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Freytag's Pyramid (1863)</h4>
+                    <p class="text-sm text-slate-600">Gustav Freytag mengembangkan diagram piramida naratif yang terdiri dari: <em>Exposition → Rising Action → Climax → Falling Action → Denouement</em>. Model ini sangat berguna untuk menganalisis cerita yang lebih kompleks, seperti novel atau drama.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Komponen Materi -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">9.2 Komponen Utama Narrative Text</h2>
+            
+            <div class="space-y-8">
+                <!-- Purpose -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-bullseye mr-2 text-luxury-gold"></i> A. Purpose (Tujuan Komunikatif)</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 mb-4">Tujuan komunikatif (<em>social purpose</em>) dari Narrative Text adalah:</p>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                                <p class="text-sm text-green-800 font-semibold mb-2">🎯 To Amuse / Entertain</p>
+                                <p class="text-sm text-green-700">To amuse or entertain the readers/listeners with an imaginative story.</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <p class="text-sm text-blue-800 font-semibold mb-2">🎯 To Teach Moral Values</p>
+                                <p class="text-sm text-blue-700">To convey moral lessons or life values through the story's events.</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                                <p class="text-sm text-purple-800 font-semibold mb-2">🎯 To Preserve Culture</p>
+                                <p class="text-sm text-purple-700">To preserve cultural heritage through legends, myths, and folktales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generic Structure -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-sitemap mr-2 text-luxury-gold"></i> B. Generic Structure (Struktur Teks)</h3>
+                    </div>
+                    <div class="p-6">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b-2 border-luxury-gold">
+                                    <th class="py-3 px-4 text-luxury-900 font-bold">Bagian</th>
+                                    <th class="py-3 px-4 text-luxury-900 font-bold">Fungsi</th>
+                                    <th class="py-3 px-4 text-luxury-900 font-bold">Contoh</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm text-slate-700">
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-3 px-4 font-semibold text-luxury-gold">1. Orientation</td>
+                                    <td class="py-3 px-4">Pengenalan tokoh, latar (waktu & tempat), dan situasi awal cerita.</td>
+                                    <td class="py-3 px-4 italic">"Once upon a time, in a small village in West Sumatra, there lived a poor but kind-hearted boy named Malin Kundang."</td>
+                                </tr>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-3 px-4 font-semibold text-luxury-gold">2. Complication</td>
+                                    <td class="py-3 px-4">Munculnya <strong>konflik atau masalah</strong> yang harus dihadapi tokoh.</td>
+                                    <td class="py-3 px-4 italic">"One day, Malin went overseas to seek his fortune. Years later, he returned as a rich merchant, but he denied his poor old mother."</td>
+                                </tr>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-3 px-4 font-semibold text-luxury-gold">3. Resolution</td>
+                                    <td class="py-3 px-4">Penyelesaian konflik — bisa <em>happy ending</em> atau <em>sad ending</em>.</td>
+                                    <td class="py-3 px-4 italic">"His mother prayed to God, and suddenly a storm came. Malin was turned into a stone as punishment for his disobedience."</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-semibold text-luxury-gold">4. Reorientation / Coda (Opsional)</td>
+                                    <td class="py-3 px-4">Pesan moral atau pelajaran yang bisa dipetik dari cerita.</td>
+                                    <td class="py-3 px-4 italic">"The story teaches us to always honor and respect our parents, no matter how successful we become."</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Language Features -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-language mr-2 text-luxury-gold"></i> C. Language Features (Ciri Kebahasaan)</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                                <h4 class="font-bold text-yellow-800 mb-2">1. Simple Past Tense</h4>
+                                <p class="text-sm text-yellow-700 mb-2">Menggunakan bentuk <strong>lampau</strong> karena menceritakan peristiwa yang sudah terjadi.</p>
+                                <ul class="list-disc list-inside text-sm text-yellow-700 space-y-1">
+                                    <li>"The wolf <em>ate</em> the grandmother."</li>
+                                    <li>"She <em>lived</em> happily ever after."</li>
+                                </ul>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                                <h4 class="font-bold text-purple-800 mb-2">2. Time Connectives</h4>
+                                <p class="text-sm text-purple-700 mb-2">Kata penghubung waktu yang khas dalam naratif.</p>
+                                <ul class="list-disc list-inside text-sm text-purple-700 space-y-1">
+                                    <li><em>Once upon a time, One day, Long ago, Finally, In the end</em></li>
+                                </ul>
+                            </div>
+                            <div class="bg-pink-50 p-4 rounded-lg border border-pink-200">
+                                <h4 class="font-bold text-pink-800 mb-2">3. Specific Characters</h4>
+                                <p class="text-sm text-pink-700 mb-2">Tokoh spesifik (bukan umum) yang menjadi pusat cerita.</p>
+                                <ul class="list-disc list-inside text-sm text-pink-700 space-y-1">
+                                    <li>"<em>Cinderella</em>", "<em>Malin Kundang</em>", "<em>The smart mouse deer</em>"</li>
+                                </ul>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                                <h4 class="font-bold text-indigo-800 mb-2">4. Action Verbs & Direct Speech</h4>
+                                <p class="text-sm text-indigo-700 mb-2">Kata kerja aksi dan dialog langsung membuat cerita hidup.</p>
+                                <ul class="list-disc list-inside text-sm text-indigo-700 space-y-1">
+                                    <li>Action verbs: <em>ran, fought, cried, jumped</em></li>
+                                    <li>Direct speech: "<em>Help me!</em>" she cried.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-teal-50 p-4 rounded-lg border border-teal-200">
+                                <h4 class="font-bold text-teal-800 mb-2">5. Adjectives of Description</h4>
+                                <p class="text-sm text-teal-700 mb-2">Banyak adjektiva untuk menggambarkan tokoh dan latar.</p>
+                                <ul class="list-disc list-inside text-sm text-teal-700 space-y-1">
+                                    <li><em>beautiful, evil, brave, dark forest, tall mountain</em></li>
+                                </ul>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                                <h4 class="font-bold text-orange-800 mb-2">6. Dialogue (Direct Speech)</h4>
+                                <p class="text-sm text-orange-700 mb-2">Dialog antar tokoh membuat cerita lebih dramatis.</p>
+                                <ul class="list-disc list-inside text-sm text-orange-700 space-y-1">
+                                    <li>"Who's there?" asked the wolf.</li>
+                                    <li>"It's me, Grandma," said Little Red Riding Hood.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Types of Narrative -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-layer-group mr-2 text-luxury-gold"></i> D. Types of Narrative Text</h3>
+                    </div>
+                    <div class="p-6 grid md:grid-cols-3 gap-6">
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-paw text-luxury-gold mr-2"></i> Fable</h4>
+                            <p class="text-sm text-slate-600 mb-2">Cerita dengan <strong>tokoh hewan</strong> yang berperilaku seperti manusia, mengandung pesan moral.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "The Tortoise and the Hare", "The Ant and the Grasshopper"</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-landmark text-luxury-gold mr-2"></i> Legend</h4>
+                            <p class="text-sm text-slate-600 mb-2">Cerita tentang <strong>asal-usul suatu tempat</strong>, sering melibatkan unsur sejarah.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "Malin Kundang", "Tangkuban Perahu", "Danau Toba"</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-wand-magic-sparkles text-luxury-gold mr-2"></i> Fairy Tale</h4>
+                            <p class="text-sm text-slate-600 mb-2">Cerita <strong>ajaib</strong> dengan unsur fantasi, peri, atau sihir.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "Cinderella", "Snow White", "Sleeping Beauty"</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-ghost text-luxury-gold mr-2"></i> Myth</h4>
+                            <p class="text-sm text-slate-600 mb-2">Cerita tentang <strong>dewa-dewi atau makhluk supernatural</strong>, sering terkait kepercayaan.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "Nyai Roro Kidul", "Greek Myths"</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-users text-luxury-gold mr-2"></i> Folktale</h4>
+                            <p class="text-sm text-slate-600 mb-2">Cerita rakyat yang diturunkan secara lisan dari generasi ke generasi.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "Batu Gantung", "Timun Mas"</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-heart text-luxury-gold mr-2"></i> Romance / Mystery</h4>
+                            <p class="text-sm text-slate-600 mb-2">Cerita cinta atau misteri yang memikat pembaca dengan ketegangan.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "Romeo and Juliet", "Sherlock Holmes"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contoh Teks Lengkap -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">9.3 Contoh Teks Narrative Lengkap</h2>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                <div class="bg-luxury-900 text-white p-4">
+                    <h3 class="text-xl font-bold"><i class="fas fa-quote-left mr-2 text-luxury-gold"></i> "The Legend of Lake Toba" (Folktale from North Sumatra)</h3>
+                </div>
+                <div class="p-6">
+                    <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500 mb-4">
+                        <p class="text-xs font-bold text-green-800 mb-1">📍 ORIENTATION</p>
+                        <p class="text-sm text-slate-700">Once upon a time, there lived a poor farmer named Toba in a small village. He spent his days fishing in a nearby river to earn his living. One day, when he was fishing, he caught a beautiful golden fish. To his surprise, the fish transformed into a beautiful princess. The princess agreed to marry Toba on one condition: he must never reveal that she was once a fish.</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 mb-4">
+                        <p class="text-xs font-bold text-blue-800 mb-1">⚡ COMPLICATION</p>
+                        <p class="text-sm text-slate-700 mb-3">Toba promised, and they were married. They had a son named Samosir, who was very hungry all the time. One day, Samosir ate all the food meant for his father. Toba became extremely angry and shouted, "You son of a fish!"</p>
+                        <p class="text-sm text-slate-700">The princess, his wife, was heartbroken when she heard those words. She felt betrayed because Toba had broken his promise. She cried bitterly and told Samosir to run to the top of the hill. As she cried, water began to rise from her tears, covering the entire valley.</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500 mb-4">
+                        <p class="text-xs font-bold text-purple-800 mb-1">✨ RESOLUTION</p>
+                        <p class="text-sm text-slate-700">The water formed a vast lake, which is now known as <strong>Lake Toba</strong>. The hill where Samosir stood became an island in the middle of the lake, called <strong>Samosir Island</strong>. Toba regretted his words, but it was too late. He could never bring his wife back.</p>
+                    </div>
+                    <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-xs font-bold text-yellow-800 mb-1">💎 MORAL VALUE</p>
+                        <p class="text-sm text-slate-700">The story teaches us to <strong>always keep our promises</strong> and <strong>control our emotions</strong>, especially when we are angry. Words spoken in anger can cause irreversible damage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perbedaan Narrative vs Recount -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">9.4 Narrative Text vs Recount Text</h2>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                <div class="p-6">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b-2 border-luxury-gold">
+                                <th class="py-3 px-4 text-luxury-900 font-bold">Aspek</th>
+                                <th class="py-3 px-4 text-luxury-900 font-bold">Narrative Text</th>
+                                <th class="py-3 px-4 text-luxury-900 font-bold">Recount Text</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-700">
+                            <tr class="border-b border-slate-100">
+                                <td class="py-3 px-4 font-semibold">Tujuan</td>
+                                <td class="py-3 px-4">To amuse/entertain with a story</td>
+                                <td class="py-3 px-4">To retell past events to inform</td>
+                            </tr>
+                            <tr class="border-b border-slate-100">
+                                <td class="py-3 px-4 font-semibold">Konflik</td>
+                                <td class="py-3 px-4 text-green-700 font-semibold">ADA (Complication)</td>
+                                <td class="py-3 px-4 text-red-700 font-semibold">TIDAK ADA</td>
+                            </tr>
+                            <tr class="border-b border-slate-100">
+                                <td class="py-3 px-4 font-semibold">Struktur</td>
+                                <td class="py-3 px-4">Orientation → Complication → Resolution</td>
+                                <td class="py-3 px-4">Orientation → Events → Reorientation</td>
+                            </tr>
+                            <tr class="border-b border-slate-100">
+                                <td class="py-3 px-4 font-semibold">Jenis Cerita</td>
+                                <td class="py-3 px-4">Fiktif, legenda, dongeng</td>
+                                <td class="py-3 px-4">Nyata, pengalaman pribadi, sejarah</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold">Tenses</td>
+                                <td class="py-3 px-4">Simple Past Tense</td>
+                                <td class="py-3 px-4">Simple Past Tense</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teknik Inovatif -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">9.5 Teknik Inovatif & Tips Praktis</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-theater-masks text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Storytelling & Role Play</h4>
+                    <p class="text-sm text-slate-300">Siswa menceritakan kembali cerita dengan gaya mereka sendiri atau bermain peran sebagai tokoh. Melatih speaking skills dan kepercayaan diri.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-map text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Story Mapping</h4>
+                    <p class="text-sm text-slate-300">Siswa membuat peta visual cerita (tokoh, latar, konflik, resolusi) untuk memahami struktur naratif. Melatih kemampuan analisis.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-video text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Digital Storytelling</h4>
+                    <p class="text-sm text-slate-300">Siswa membuat video pendek atau komik digital berdasarkan cerita rakyat lokal. Menggabungkan literasi dan teknologi.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-pen-fancy text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Alternative Ending</h4>
+                    <p class="text-sm text-slate-300">Siswa menulis ulang akhir cerita yang berbeda dari aslinya. Melatih kreativitas dan berpikir kritis.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-book text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Story Chain</h4>
+                    <p class="text-sm text-slate-300">Siswa duduk melingkar. Setiap siswa menyumbang satu kalimat untuk membangun cerita bersama. Melatih kolaborasi dan imajinasi.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-film text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Movie Review</h4>
+                    <p class="text-sm text-slate-300">Siswa menonton film pendek, lalu menganalisis struktur naratifnya (orientation, complication, resolution). Relevan dengan kehidupan digital.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kesimpulan -->
+        <section class="mb-16 bg-luxury-gold/10 p-8 rounded-2xl border border-luxury-gold/30" data-aos="fade-up">
+            <h2 class="text-2xl font-serif font-bold text-luxury-900 mb-4">Kesimpulan</h2>
+            <p class="text-slate-700 leading-relaxed mb-4">
+                <strong>Narrative Text</strong> adalah salah satu jenis teks paling kaya dan menghibur dalam bahasa Inggris. Melalui struktur <em>Orientation → Complication → Resolution</em>, naratif mengajak pembaca memasuki dunia imajinasi, merasakan konflik, dan belajar dari resolusi. Di balik setiap cerita, terdapat <strong>pesan moral</strong> yang menjadi warisan budaya dan kebijaksanaan lintas generasi.
+            </p>
+            <p class="text-slate-700 leading-relaxed">
+                Bagi siswa SMK N 1 Koto Balingka, menguasai Narrative Text bukan hanya tentang memahami cerita, tetapi juga tentang mengembangkan <strong>kreativitas, empati, dan kemampuan storytelling</strong> — keterampilan yang sangat berharga di era digital. Dengan berlatih melalui teknik Storytelling, Story Mapping, Digital Storytelling, dan Alternative Ending, siswa akan siap tidak hanya menjadi pembaca yang kritis, tetapi juga pencerita yang handal.
+            </p>
+        </section>
+
+        <!-- Daftar Pustaka -->
+        <section class="mb-20" data-aos="fade-up">
+            <h3 class="text-xl font-bold text-luxury-900 mb-4">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                <li>Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi. (2021). <em>Buku Panduan Guru Bahasa Inggris: Work in Progress! untuk SMA/SMK Kelas X</em>. Jakarta: Kemendikbudristek.</li>
+                <li>Labov, W. (1972). <em>Language in the Inner City: Studies in the Black English Vernacular</em>. Philadelphia: University of Pennsylvania Press.</li>
+                <li>Propp, V. (1928/1968). <em>Morphology of the Folktale</em>. Austin: University of Texas Press.</li>
+                <li>Halliday, M. A. K. (1978). <em>Language as Social Semiotic: The Social Interpretation of Language and Meaning</em>. London: Edward Arnold.</li>
+                <li>Freytag, G. (1863). <em>Die Technik des Dramas</em>. Leipzig: S. Hirzel.</li>
+                <li>Derewianka, B. (1990). <em>Exploring How Texts Work</em>. Sydney: Primary English Teaching Association.</li>
+                <li>Knapp, P., & Watkins, M. (2005). <em>Genre, Text, Grammar: Technologies for Describing and Teaching Text</em>. Sydney: University of New South Wales Press.</li>
+            </ul>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- UJI FORMATIF (FORMATIVE TEST) -->
+        <!-- ========================================================== -->
+        <section id="uji-formatif" class="border-t-4 border-luxury-gold pt-12" data-aos="fade-up">
+            <div class="text-center mb-10">
+                <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Evaluasi Pembelajaran</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-luxury-900 mt-4">📋 Uji Formatif Bab 9</h2>
+                <p class="text-slate-600 mt-2 max-w-2xl mx-auto">Uji pemahaman Anda tentang materi Narrative Text. Pastikan semua data dan jawaban terisi sebelum mengirimkan hasil.</p>
+            </div>
+
+            <form id="quizForm" class="max-w-4xl mx-auto space-y-8">
+                
+                <!-- Data Siswa -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-6 flex items-center">
+                        <i class="fas fa-user-graduate text-luxury-gold mr-3"></i> Data Siswa
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" id="nama" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" id="nis" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Tanggal <span class="text-red-500">*</span></label>
+                            <input type="date" id="tanggal" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <select id="kelas" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                                <option value="">Pilih Kelas</option>
+                                <option value="X TKJ 1">X TKJ 1</option>
+                                <option value="X TKJ 2">X TKJ 2</option>
+                                <option value="X AKL 1">X AKL 1</option>
+                                <option value="X AKL 2">X AKL 2</option>
+                                <option value="X OTKP 1">X OTKP 1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select id="semester" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                                <option value="Semester 1 (Ganjil)">Semester 1 (Ganjil)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-6 flex items-center">
+                        <i class="fas fa-list-ol text-luxury-gold mr-3"></i> Bagian A: Pilihan Ganda 
+                        <span class="ml-auto text-sm font-normal text-slate-500">(10 Soal x 10 Poin = 100)</span>
+                    </h3>
+                    <p class="text-red-600 text-sm mb-6 font-semibold"><i class="fas fa-exclamation-circle mr-1"></i> Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+                    <div class="space-y-6" id="mcq-container">
+                        <!-- Soal 1 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">1. Tujuan komunikatif dari Narrative Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. To describe a particular person or place in detail</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. To amuse or entertain readers with a story that has complications</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. To explain how to make or do something</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. To retell past events for the purpose of informing</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. To persuade the reader to do something</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">2. Struktur umum (generic structure) Narrative Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Orientation → Complication → Resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Orientation → Events → Reorientation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Goal → Materials → Steps</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Identification → Description</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. General Classification → Description</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">3. Bagian <em>Complication</em> dalam Narrative Text berfungsi untuk...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Memperkenalkan tokoh dan latar cerita</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Memberikan pesan moral di akhir cerita</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Menyajikan konflik atau masalah yang harus dihadapi tokoh</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Menjelaskan langkah-langkah membuat sesuatu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Mendeskripsikan ciri fisik tokoh</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">4. Tenses yang dominan digunakan dalam Narrative Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Simple Present Tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Present Continuous Tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Future Tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Simple Past Tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Present Perfect Tense</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">5. Cerita tentang asal-usul suatu tempat (misalnya "Danau Toba") termasuk jenis Narrative Text...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Fable</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Legend</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Fairy Tale</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Myth</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Romance</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">6. "Once upon a time, there lived a poor farmer named Toba." Kalimat ini merupakan bagian...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Orientation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Complication</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Coda</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Reorientation</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">7. Cerita dengan tokoh hewan yang berperilaku seperti manusia dan mengandung pesan moral disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Legend</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Myth</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Fable</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Fairy Tale</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Folktale</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">8. Perbedaan utama antara Narrative Text dan Recount Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Narrative menggunakan past tense, Recount menggunakan present tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Narrative untuk informasi, Recount untuk hiburan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Tidak ada perbedaan, keduanya sama</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Narrative memiliki konflik (complication), Recount tidak memiliki konflik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Narrative menceritakan peristiwa nyata, Recount menceritakan peristiwa fiktif</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">9. Menurut Labov (1972), elemen naratif yang berisi penyelesaian konflik disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Orientation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Complicating Action</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Evaluation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Abstract</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">10. Teknik "Alternative Ending" dalam pembelajaran Narrative Text bertujuan untuk melatih...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Kreativitas dan berpikir kritis dalam menciptakan akhir cerita yang berbeda</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Kemampuan menghafal kosakata</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Keterampilan menerjemahkan teks</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Penguasaan tata bahasa</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Keterampilan membaca cepat</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-6 flex items-center">
+                        <i class="fas fa-pen-fancy text-luxury-gold mr-3"></i> Bagian B: Essay 
+                        <span class="ml-auto text-sm font-normal text-slate-500">(5 Soal x 20 Poin = 100)</span>
+                    </h3>
+                    <p class="text-red-600 text-sm mb-6 font-semibold"><i class="fas fa-exclamation-circle mr-1"></i> Mohon isi semua 5 soal essay!</p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">1. Jelaskan tujuan komunikatif dan struktur umum (generic structure) dari Narrative Text! Berikan contoh singkat untuk masing-masing bagiannya!</label>
+                            <textarea name="essay1" required rows="3" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">2. Sebutkan dan jelaskan 5 jenis Narrative Text (Fable, Legend, Fairy Tale, Myth, Folktale)! Berikan masing-masing 1 contoh cerita dari Indonesia!</label>
+                            <textarea name="essay2" required rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">3. Jelaskan perbedaan antara Narrative Text dan Recount Text! Mengapa konflik (complication) menjadi elemen pembeda yang paling penting?</label>
+                            <textarea name="essay3" required rows="3" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">4. Berdasarkan cerita "The Legend of Lake Toba", identifikasi bagian Orientation, Complication, Resolution, dan Moral Value! Apa pesan moral yang dapat Anda ambil dari cerita tersebut?</label>
+                            <textarea name="essay4" required rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">5. Tulislah sebuah Narrative Text lengkap (minimal 150 kata) tentang salah satu cerita rakyat dari Sumatra Barat (misalnya: "Malin Kundang", "Batu Gantung", atau cerita lain). Pastikan teks memiliki struktur Orientation → Complication → Resolution dan menggunakan minimal 5 kata kerja bentuk lampau (past tense)!</label>
+                            <textarea name="essay5" required rows="8" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Aksi -->
+                <div class="bg-luxury-900 text-white p-8 rounded-2xl shadow-xl border border-luxury-gold/30 text-center">
+                    <h3 class="text-2xl font-serif font-bold text-luxury-gold mb-4">📊 Hasil Uji Formatif</h3>
+                    <div class="text-5xl font-bold text-white mb-2" id="totalScore">0</div>
+                    <p class="text-slate-400 mb-6 text-sm">Skor Pilihan Ganda: <span id="mcqScore">0</span>/100 | Skor Essay: <span id="essayScore">Dinilai Guru</span></p>
+                    
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <button type="button" onclick="hitungSkor()" class="bg-luxury-gold text-luxury-900 font-bold px-8 py-3 rounded-lg hover:bg-white transition-all duration-300 shadow-lg">
+                            <i class="fas fa-calculator mr-2"></i> Hitung Skor & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="border border-luxury-gold text-luxury-gold font-bold px-8 py-3 rounded-lg hover:bg-luxury-gold hover:text-luxury-900 transition-all duration-300">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Hasil ke Guru
+                        </button>
+                        <button type="button" onclick="window.print()" class="border border-slate-600 text-slate-300 font-semibold px-8 py-3 rounded-lg hover:border-white hover:text-white transition-all duration-300">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh / Cetak PDF
+                        </button>
+                        <button type="button" onclick="resetForm()" class="border border-red-500 text-red-400 font-semibold px-8 py-3 rounded-lg hover:bg-red-500 hover:text-white transition-all duration-300">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-6 italic">* Skor Essay akan dinilai secara manual oleh guru berdasarkan kedalaman jawaban dan ketepatan tata bahasa.</p>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- Footer Navigation -->
+        <div class="flex justify-between items-center mt-16 pt-8 border-t border-slate-200">
+            <a href="8.html" class="text-luxury-900 font-semibold hover:text-luxury-gold transition flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> UTS (Pertemuan 8)
+            </a>
+            <a href="10.html" class="bg-luxury-900 text-white px-6 py-3 rounded-lg hover:bg-luxury-gold hover:text-luxury-900 transition flex items-center font-semibold">
+                Bab 10: Procedure Text <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-900 text-slate-400 py-10 border-t border-slate-800 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2">&copy; 2026 VERA SEPTIA FITRI, S.Pd — SMK N 1 KOTO BALINGKA</p>
+            <p class="text-sm text-slate-500">Email: <a href="mailto:ve.veraseptiafitri@gmail.com" class="hover:text-luxury-gold transition">ve.veraseptiafitri@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Kunci Jawaban Pilihan Ganda Bab 9
+        const correctAnswers = {
+            q1: 'b', q2: 'a', q3: 'c', q4: 'd', q5: 'b',
+            q6: 'a', q7: 'c', q8: 'd', q9: 'b', q10: 'a'
+        };
+
+        function hitungSkor() {
+            // Validasi Data Siswa
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const kelas = document.getElementById('kelas').value;
+
+            if (!nama || !nis || !tanggal || !kelas) {
+                alert("⚠️ Mohon lengkapi semua Data Siswa terlebih dahulu!");
+                return;
+            }
+
+            // Validasi Pilihan Ganda
+            let mcqScore = 0;
+            let allMcqAnswered = true;
+            
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const questionDiv = document.querySelector(`input[name="q${i}"]`).closest('div[data-correct]');
+                
+                // Reset classes
+                questionDiv.classList.remove('correct-answer', 'wrong-answer');
+                
+                if (selected) {
+                    if (selected.value === correctAnswers[`q${i}`]) {
+                        mcqScore += 10;
+                        questionDiv.classList.add('correct-answer');
+                    } else {
+                        questionDiv.classList.add('wrong-answer');
+                    }
+                } else {
+                    allMcqAnswered = false;
+                }
+            }
+
+            if (!allMcqAnswered) {
+                alert("⚠️ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!");
+                return;
+            }
+
+            // Validasi Essay (Cek apakah ada yang kosong)
+            let allEssayAnswered = true;
+            for (let i = 1; i <= 5; i++) {
+                if (document.querySelector(`textarea[name="essay${i}"]`).value.trim() === "") {
+                    allEssayAnswered = false;
+                    break;
+                }
+            }
+
+            if (!allEssayAnswered) {
+                alert("⚠️ Mohon isi semua 5 soal essay!");
+                return;
+            }
+
+            // Tampilkan Hasil
+            document.getElementById('mcqScore').innerText = mcqScore;
+            document.getElementById('totalScore').innerText = mcqScore;
+            
+            // Scroll ke hasil
+            document.getElementById('totalScore').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\n\nNama: ${nama}\nNIS: ${nis}\nSkor Pilihan Ganda: ${mcqScore}/100\n\nCatatan: Skor Essay akan dinilai oleh guru. Silakan klik "Kirim Hasil ke Guru" atau "Unduh / Cetak PDF".`);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const mcqScore = document.getElementById('mcqScore').innerText;
+
+            if (mcqScore === "0") {
+                alert("⚠️ Silakan hitung skor terlebih dahulu sebelum mengirim!");
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif Bab 9 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu VERA SEPTIA FITRI, S.Pd,\n\nBerikut adalah hasil Uji Formatif Bab 9 (Narrative Text) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${mcqScore}/100\n\nJawaban Essay telah saya isi pada lembar uji formatif terlampir (atau dapat dilihat pada sistem).\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:ve.veraseptiafitri@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if(confirm("Apakah Anda yakin ingin mengosongkan semua jawaban dan mulai ulang?")) {
+                document.getElementById("quizForm").reset();
+                document.getElementById('mcqScore').innerText = "0";
+                document.getElementById('totalScore').innerText = "0";
+                
+                // Hapus highlight warna
+                document.querySelectorAll('[data-correct]').forEach(div => {
+                    div.classList.remove('correct-answer', 'wrong-answer');
+                });
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

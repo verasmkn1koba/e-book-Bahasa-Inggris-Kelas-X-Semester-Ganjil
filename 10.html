@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 10: Procedure Text - Bahasa Inggris Kelas X</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        luxury: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            gold: '#d4af37',
+                            goldLight: '#f3e5ab',
+                            cream: '#faf9f6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .correct-answer { background-color: #dcfce7 !important; border-color: #22c55e !important; }
+        .wrong-answer { background-color: #fee2e2 !important; border-color: #ef4444 !important; }
+        .step-number {
+            width: 36px; height: 36px; min-width: 36px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; font-weight: 700; font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="bg-luxury-cream text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-dark transition-all duration-300 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl md:text-2xl font-serif font-bold text-gold-gradient tracking-wide">
+                <i class="fas fa-book-open mr-2"></i>B. Inggris Kelas X
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-luxury-gold transition-colors">Beranda</a>
+                <a href="index.html#about" class="hover:text-luxury-gold transition-colors">Tentang</a>
+                <a href="index.html#toc" class="hover:text-luxury-gold transition-colors">Daftar Bab</a>
+                <a href="index.html#author" class="hover:text-luxury-gold transition-colors">Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="relative pt-32 pb-16 bg-luxury-900 text-white overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-luxury-gold/10 to-transparent"></div>
+        <div class="container mx-auto px-6 relative z-10" data-aos="fade-down">
+            <a href="index.html" class="inline-flex items-center text-luxury-gold hover:text-white transition-colors mb-6 text-sm font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i> Kembali ke Daftar Bab
+            </a>
+            <span class="bg-luxury-gold/20 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-luxury-gold/30">Pertemuan 10</span>
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6 leading-tight">
+                Bab 10: <span class="text-gold-gradient">Procedure Text</span>
+            </h1>
+            <p class="text-slate-300 text-lg max-w-3xl leading-relaxed">
+                Menguasai seni menulis dan memahami teks prosedur — instruksi langkah demi langkah untuk membuat atau melakukan sesuatu. Dari resep masakan tradisional Minang hingga tutorial teknologi digital, <em>Procedure Text</em> adalah jenis teks paling fungsional dan aplikatif dalam kehidupan sehari-hari maupun dunia kerja.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="9.html" class="border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:border-luxury-gold hover:text-luxury-gold transition-all duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i> Bab Sebelumnya
+                </a>
+                <a href="#sub1" class="bg-luxury-gold text-luxury-900 font-bold px-6 py-3 rounded-lg hover:bg-white transition-all duration-300 shadow-lg shadow-luxury-gold/20">
+                    <i class="fas fa-book-reader mr-2"></i> Mulai Membaca
+                </a>
+                <a href="11.html" class="border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:border-luxury-gold hover:text-luxury-gold transition-all duration-300">
+                    Bab Selanjutnya <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="sub1" class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">Pendahuluan</h2>
+            <p class="text-slate-600 leading-relaxed mb-4 text-justify">
+                Pernahkah Anda membaca resep masakan, mengikuti petunjuk merakit furnitur, atau menonton tutorial di YouTube tentang cara mengedit video? Semua itu adalah bentuk <strong>Procedure Text</strong> — teks yang memberikan instruksi langkah demi langkah tentang cara membuat atau melakukan sesuatu. Tanpa kita sadari, kita membaca dan mengikuti teks prosedur hampir setiap hari.
+            </p>
+            <p class="text-slate-600 leading-relaxed mb-6 text-justify">
+                Bagi siswa SMK, <em>Procedure Text</em> adalah jenis teks yang <strong>paling langsung relevan</strong> dengan dunia kerja. Di industri, Anda akan sering berhadapan dengan <em>Standard Operating Procedures</em> (SOP), manual penggunaan alat, panduan keselamatan kerja, dan instruksi teknis. Kemampuan memahami dan menulis teks prosedur dengan jelas, runtut, dan akurat bukan hanya keterampilan akademis, tetapi juga <strong>kompetensi profesional</strong> yang sangat dibutuhkan.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl my-8">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-lightbulb mr-2"></i>🔑 Konsep Kunci</h3>
+                <ul class="list-disc list-inside text-blue-800 space-y-2 text-sm">
+                    <li><strong>Purpose:</strong> To explain how to make or do something through a sequence of steps.</li>
+                    <li><strong>Generic Structure:</strong> Goal/Aim (tujuan) → Materials/Ingredients (bahan/alat) → Steps/Methods (langkah-langkah).</li>
+                    <li><strong>Language Features:</strong> Imperative sentences (kalimat perintah), action verbs, temporal conjunctions (<em>first, then, next, finally</em>), technical terms, simple present tense.</li>
+                    <li><strong>Types:</strong> Recipe, Manual, Tutorial, SOP, Tips/Guidelines.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-16" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-panel p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-xl font-serif font-bold text-luxury-900 mb-4"><i class="fas fa-search text-luxury-gold mr-2"></i>📖 Studi Kasus 10: SOP yang Membingungkan</h3>
+                <p class="text-slate-600 mb-4 italic">
+                    "Seorang siswa SMK jurusan TKJ sedang melakukan Praktik Kerja Lapangan (PKL) di sebuah perusahaan IT. Supervisor memberinya instruksi lisan untuk menginstal jaringan: 'Pasang kabelnya, terus setting IP-nya, nanti colok ke switch, oh tapi sebelumnya cek dulu kabelnya pakai tester, terus kalau sudah baru konfigurasi router-nya.' Siswa tersebut bingung karena instruksi tidak diberikan secara berurutan dan tidak tertulis. Akibatnya, ia melakukan kesalahan yang menyebabkan jaringan down selama 2 jam."
+                </p>
+                <div class="bg-luxury-gold/10 p-4 rounded-lg border border-luxury-gold/30">
+                    <p class="text-sm text-luxury-900 font-semibold">💡 Pembelajaran:</p>
+                    <p class="text-sm text-slate-700 mt-1">
+                        Procedure Text yang efektif harus <strong>runtut</strong> (langkah demi langkah), <strong>jelas</strong> (menggunakan kalimat perintah yang spesifik), dan <strong>lengkap</strong> (mencantumkan semua alat dan bahan yang dibutuhkan). Contoh perbaikan dalam bentuk SOP tertulis: "Step 1: Test the cable using a cable tester. Step 2: Connect the cable to the switch. Step 3: Configure the IP address on the computer. Step 4: Configure the router settings. Step 5: Test the network connection."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">10.1 Landasan Teoretis</h2>
+            <p class="text-slate-600 mb-6">Pemahaman teori membantu siswa menyadari <em>mengapa</em> Procedure Text memiliki struktur dan ciri kebahasaan tertentu.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Systemic Functional Linguistics (Halliday, 1978)</h4>
+                    <p class="text-sm text-slate-600">Menurut Halliday, Procedure Text menjalankan fungsi <em>ideational</em> bahasa — yaitu menyampaikan pengalaman manusia dalam bentuk urutan tindakan (procedural sequence). Teks ini juga menjalankan fungsi <em>textual</em> melalui penggunaan <em>temporal conjunctions</em> yang mengorganisir langkah-langkah secara logis dan kronologis.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Genre-Based Approach (Derewianka, 1990)</h4>
+                    <p class="text-sm text-slate-600">Procedure Text termasuk dalam kategori <em>procedural genres</em> yang berfungsi memandu pembaca untuk melakukan atau membuat sesuatu. Pendekatan berbasis genre menekankan bahwa setiap jenis teks memiliki <em>social purpose</em> dan <em>generic structure</em> yang khas, yang harus dikuasai siswa secara eksplisit agar dapat berfungsi efektif dalam konteks sosial tertentu.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Cognitive Load Theory (Sweller, 1988)</h4>
+                    <p class="text-sm text-slate-600">Teori ini menjelaskan bahwa instruksi yang baik harus meminimalkan <em>cognitive load</em> (beban kognitif) pembaca. Procedure Text yang efektif menggunakan langkah-langkah yang pendek, jelas, dan berurutan agar pembaca tidak kewalahan memproses informasi.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Speech Act Theory (Austin & Searle)</h4>
+                    <p class="text-sm text-slate-600">Kalimat imperatif dalam Procedure Text dikategorikan sebagai <em>Directive Illocutionary Acts</em> — tindak tutur yang bertujuan memerintah, meminta, atau mengarahkan pembaca untuk melakukan sesuatu. Kekuatan direktif ini harus diimbangi dengan kejelasan dan kesopanan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Komponen Materi -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">10.2 Komponen Utama Procedure Text</h2>
+            
+            <div class="space-y-8">
+                <!-- Purpose -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-bullseye mr-2 text-luxury-gold"></i> A. Purpose (Tujuan Komunikatif)</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 mb-4">Tujuan komunikatif (<em>social purpose</em>) dari Procedure Text adalah:</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                                <p class="text-sm text-green-800 font-semibold mb-2">🎯 To Explain How to Make Something</p>
+                                <p class="text-sm text-green-700">Memberikan instruksi tentang cara membuat sesuatu (resep, kerajinan, produk).</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <p class="text-sm text-blue-800 font-semibold mb-2">🎯 To Explain How to Do Something</p>
+                                <p class="text-sm text-blue-700">Memberikan instruksi tentang cara melakukan sesuatu (tutorial, manual, SOP).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generic Structure -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-sitemap mr-2 text-luxury-gold"></i> B. Generic Structure (Struktur Teks)</h3>
+                    </div>
+                    <div class="p-6">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b-2 border-luxury-gold">
+                                    <th class="py-3 px-4 text-luxury-900 font-bold">Bagian</th>
+                                    <th class="py-3 px-4 text-luxury-900 font-bold">Fungsi</th>
+                                    <th class="py-3 px-4 text-luxury-900 font-bold">Contoh</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm text-slate-700">
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-3 px-4 font-semibold text-luxury-gold">1. Goal / Aim</td>
+                                    <td class="py-3 px-4">Menyatakan <strong>tujuan</strong> atau apa yang akan dibuat/dilakukan. Biasanya terdapat di judul.</td>
+                                    <td class="py-3 px-4 italic">"How to Make Rendang" atau "How to Set Up a Local Area Network (LAN)"</td>
+                                </tr>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-3 px-4 font-semibold text-luxury-gold">2. Materials / Ingredients</td>
+                                    <td class="py-3 px-4">Daftar <strong>bahan, alat, atau perangkat</strong> yang dibutuhkan.</td>
+                                    <td class="py-3 px-4 italic">"Ingredients: 1 kg beef, 400 ml coconut milk, 10 red chilies..."</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-semibold text-luxury-gold">3. Steps / Methods</td>
+                                    <td class="py-3 px-4">Langkah-langkah <strong>berurutan</strong> yang harus diikuti untuk mencapai tujuan.</td>
+                                    <td class="py-3 px-4 italic">"Step 1: Cut the beef into small pieces. Step 2: Blend the spices..."</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-4 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <p class="text-sm text-yellow-800"><strong>⚠️ Catatan:</strong> Beberapa Procedure Text juga menyertakan bagian <strong>Result</strong> (hasil akhir) atau <strong>Tips/Warnings</strong> (tips/peringatan) di bagian akhir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Language Features -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-language mr-2 text-luxury-gold"></i> C. Language Features (Ciri Kebahasaan)</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                                <h4 class="font-bold text-yellow-800 mb-2">1. Imperative Sentences</h4>
+                                <p class="text-sm text-yellow-700 mb-2">Kalimat <strong>perintah</strong> yang langsung menyuruh pembaca melakukan sesuatu.</p>
+                                <ul class="list-disc list-inside text-sm text-yellow-700 space-y-1">
+                                    <li>"<em>Cut</em> the beef into small pieces."</li>
+                                    <li>"<em>Connect</em> the cable to the switch."</li>
+                                    <li>"<em>Do not touch</em> the hot surface."</li>
+                                </ul>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                                <h4 class="font-bold text-purple-800 mb-2">2. Action Verbs</h4>
+                                <p class="text-sm text-purple-700 mb-2">Kata kerja yang menunjukkan <strong>tindakan fisik</strong>.</p>
+                                <ul class="list-disc list-inside text-sm text-purple-700 space-y-1">
+                                    <li><em>stir, pour, cut, mix, blend, install, connect, press, turn on</em></li>
+                                </ul>
+                            </div>
+                            <div class="bg-pink-50 p-4 rounded-lg border border-pink-200">
+                                <h4 class="font-bold text-pink-800 mb-2">3. Temporal Conjunctions</h4>
+                                <p class="text-sm text-pink-700 mb-2">Kata penghubung yang menunjukkan <strong>urutan waktu</strong>.</p>
+                                <ul class="list-disc list-inside text-sm text-pink-700 space-y-1">
+                                    <li><em>First, then, next, after that, finally, meanwhile</em></li>
+                                </ul>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                                <h4 class="font-bold text-indigo-800 mb-2">4. Simple Present Tense & Technical Terms</h4>
+                                <p class="text-sm text-indigo-700 mb-2">Menggunakan <strong>present tense</strong> dan <strong>istilah teknis</strong> yang relevan.</p>
+                                <ul class="list-disc list-inside text-sm text-indigo-700 space-y-1">
+                                    <li>"The router <em>connects</em> to the modem."</li>
+                                    <li>Technical terms: <em>IP address, bandwidth, sauté, simmer</em></li>
+                                </ul>
+                            </div>
+                            <div class="bg-teal-50 p-4 rounded-lg border border-teal-200">
+                                <h4 class="font-bold text-teal-800 mb-2">5. Adverbs of Manner & Quantity</h4>
+                                <p class="text-sm text-teal-700 mb-2">Kata keterangan cara dan jumlah untuk presisi instruksi.</p>
+                                <ul class="list-disc list-inside text-sm text-teal-700 space-y-1">
+                                    <li>Manner: <em>slowly, carefully, gently, tightly</em></li>
+                                    <li>Quantity: <em>2 tablespoons, 500 grams, 3 pieces</em></li>
+                                </ul>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                                <h4 class="font-bold text-orange-800 mb-2">6. Numbered / Bullet Points</h4>
+                                <p class="text-sm text-orange-700 mb-2">Langkah-langkah disajikan dalam <strong>format bernomor</strong> untuk kejelasan.</p>
+                                <ul class="list-disc list-inside text-sm text-orange-700 space-y-1">
+                                    <li>"Step 1: ..., Step 2: ..., Step 3: ..."</li>
+                                    <li>Atau menggunakan bullet points untuk daftar bahan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Types of Procedure Text -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-layer-group mr-2 text-luxury-gold"></i> D. Types of Procedure Text</h3>
+                    </div>
+                    <div class="p-6 grid md:grid-cols-3 gap-6">
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-utensils text-luxury-gold mr-2"></i> Recipe</h4>
+                            <p class="text-sm text-slate-600 mb-2">Instruksi cara memasak atau membuat makanan/minuman.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "How to Make Rendang", "How to Brew Kopi Tubruk"</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-book text-luxury-gold mr-2"></i> Manual</h4>
+                            <p class="text-sm text-slate-600 mb-2">Petunjuk penggunaan alat, perangkat, atau mesin.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "How to Use a Fire Extinguisher", "User Manual: Laptop"</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-laptop-code text-luxury-gold mr-2"></i> Digital Tutorial</h4>
+                            <p class="text-sm text-slate-600 mb-2">Panduan langkah demi langkah untuk tugas digital/teknologi.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "How to Create a Website", "How to Edit a Video"</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-clipboard-check text-luxury-gold mr-2"></i> SOP</h4>
+                            <p class="text-sm text-slate-600 mb-2">Prosedur operasional standar di tempat kerja.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "SOP: Network Troubleshooting", "SOP: Lab Safety"</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-lightbulb text-luxury-gold mr-2"></i> Tips / Guidelines</h4>
+                            <p class="text-sm text-slate-600 mb-2">Panduan atau tips untuk melakukan sesuatu dengan lebih baik.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "Tips for Effective Studying", "Guidelines for Online Safety"</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-flask text-luxury-gold mr-2"></i> Experiment Protocol</h4>
+                            <p class="text-sm text-slate-600 mb-2">Prosedur langkah demi langkah untuk eksperimen ilmiah.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: "How to Test Water pH", "How to Grow Bacteria Culture"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contoh Teks Lengkap -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">10.3 Contoh Teks Procedure Lengkap</h2>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                <div class="bg-luxury-900 text-white p-4">
+                    <h3 class="text-xl font-bold"><i class="fas fa-quote-left mr-2 text-luxury-gold"></i> "How to Make Authentic Rendang" (Recipe from West Sumatra)</h3>
+                </div>
+                <div class="p-6">
+                    <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500 mb-4">
+                        <p class="text-xs font-bold text-green-800 mb-1">🎯 GOAL</p>
+                        <p class="text-sm text-slate-700">To make authentic Minangkabau-style Rendang, a rich and tender dry curry that has been recognized by CNN as one of the world's most delicious foods.</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 mb-4">
+                        <p class="text-xs font-bold text-blue-800 mb-2">🧂 INGREDIENTS</p>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>1 kg beef (cut into cubes)</li>
+                                <li>400 ml thick coconut milk</li>
+                                <li>600 ml thin coconut milk</li>
+                                <li>2 stalks lemongrass (bruised)</li>
+                                <li>4 kaffir lime leaves</li>
+                                <li>2 turmeric leaves</li>
+                                <li>1 piece of asam kandis</li>
+                            </ul>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li><strong>Spice paste (blend):</strong></li>
+                                <li>10 red chilies</li>
+                                <li>8 shallots</li>
+                                <li>5 cloves garlic</li>
+                                <li>3 cm ginger</li>
+                                <li>3 cm galangal</li>
+                                <li>1 tsp turmeric powder</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                        <p class="text-xs font-bold text-purple-800 mb-3">📝 STEPS</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <span class="step-number bg-luxury-900 text-luxury-gold">1</span>
+                                <p class="text-sm text-slate-700"><strong>First,</strong> blend all the spice paste ingredients until smooth using a blender or mortar and pestle.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="step-number bg-luxury-900 text-luxury-gold">2</span>
+                                <p class="text-sm text-slate-700"><strong>Then,</strong> pour the thin coconut milk into a large wok or pot. Add the spice paste, lemongrass, kaffir lime leaves, turmeric leaves, and asam kandis. Stir well.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="step-number bg-luxury-900 text-luxury-gold">3</span>
+                                <p class="text-sm text-slate-700"><strong>Next,</strong> add the beef cubes to the pot. Bring to a boil over medium heat, then reduce to low heat. Cook for about 1 hour, stirring occasionally.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="step-number bg-luxury-900 text-luxury-gold">4</span>
+                                <p class="text-sm text-slate-700"><strong>After that,</strong> pour in the thick coconut milk. Continue cooking on low heat, stirring frequently to prevent burning. This is the <em>marandang</em> process.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="step-number bg-luxury-900 text-luxury-gold">5</span>
+                                <p class="text-sm text-slate-700"><strong>Finally,</strong> keep stirring until the liquid evaporates completely and the oil separates from the spices. The rendang should be dark brown and dry. This process may take 3-4 hours in total.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-xs font-bold text-yellow-800 mb-1">💡 TIPS</p>
+                        <p class="text-sm text-slate-700">Be patient! The key to perfect rendang is slow cooking and constant stirring during the final stage. Never rush the <em>marandang</em> process. The rendang will taste even better the next day as the flavors continue to develop.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teknik Inovatif -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">10.4 Teknik Inovatif & Tips Praktis</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-video text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Video Tutorial Project</h4>
+                    <p class="text-sm text-slate-300">Siswa membuat video tutorial singkat (2-3 menit) tentang cara melakukan sesuatu, lalu menulis naskah Procedure Text-nya. Melatih speaking, writing, dan keterampilan digital.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-shuffle text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Jumbled Steps</h4>
+                    <p class="text-sm text-slate-300">Guru memberikan langkah-langkah yang diacak. Siswa harus menyusunnya kembali dalam urutan yang benar. Melatih pemahaman logika dan temporal conjunctions.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-utensils text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Cooking Class</h4>
+                    <p class="text-sm text-slate-300">Siswa menulis resep masakan tradisional Minang dalam bahasa Inggris, lalu mempraktikkannya di kelas. Menggabungkan literasi, budaya, dan keterampilan hidup.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-laptop text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Tech SOP Writing</h4>
+                    <p class="text-sm text-slate-300">Siswa menulis SOP untuk tugas teknis (misalnya: cara menginstal Windows, cara crimping kabel LAN). Sangat relevan dengan jurusan TKJ.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-exchange-alt text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Instruction Swap</h4>
+                    <p class="text-sm text-slate-300">Siswa A menulis prosedur, lalu Siswa B mengikutinya persis seperti tertulis. Jika hasilnya salah, berarti prosedurnya perlu diperbaiki. Melatih kejelasan instruksi.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-images text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Infographic Procedure</h4>
+                    <p class="text-sm text-slate-300">Siswa membuat infografis prosedur menggunakan Canva atau PowerPoint. Melatih keterampilan visual dan ringkasan informasi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kesimpulan -->
+        <section class="mb-16 bg-luxury-gold/10 p-8 rounded-2xl border border-luxury-gold/30" data-aos="fade-up">
+            <h2 class="text-2xl font-serif font-bold text-luxury-900 mb-4">Kesimpulan</h2>
+            <p class="text-slate-700 leading-relaxed mb-4">
+                <strong>Procedure Text</strong> adalah jenis teks yang paling fungsional dan langsung aplikatif dalam kehidupan sehari-hari maupun dunia kerja. Melalui struktur <em>Goal → Materials → Steps</em>, teks prosedur memandu pembaca untuk membuat atau melakukan sesuatu secara sistematis, aman, dan efektif.
+            </p>
+            <p class="text-slate-700 leading-relaxed">
+                Kunci utama menulis Procedure Text yang efektif adalah: <strong>kejelasan</strong> (menggunakan kalimat imperatif yang spesifik), <strong>keruntutan</strong> (langkah-langkah berurutan dengan temporal conjunctions), dan <strong>kelengkapan</strong> (mencantumkan semua bahan/alat yang dibutuhkan). Bagi siswa SMK N 1 Koto Balingka, penguasaan Procedure Text bukan hanya keterampilan akademis, tetapi juga <strong>kompetensi profesional</strong> yang akan digunakan seumur hidup — mulai dari menulis SOP di tempat kerja hingga membuat tutorial digital.
+            </p>
+        </section>
+
+        <!-- Daftar Pustaka -->
+        <section class="mb-20" data-aos="fade-up">
+            <h3 class="text-xl font-bold text-luxury-900 mb-4">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                <li>Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi. (2021). <em>Buku Panduan Guru Bahasa Inggris: Work in Progress! untuk SMA/SMK Kelas X</em>. Jakarta: Kemendikbudristek.</li>
+                <li>Halliday, M. A. K. (1978). <em>Language as Social Semiotic: The Social Interpretation of Language and Meaning</em>. London: Edward Arnold.</li>
+                <li>Derewianka, B. (1990). <em>Exploring How Texts Work</em>. Sydney: Primary English Teaching Association.</li>
+                <li>Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. <em>Cognitive Science</em>, 12(2), 257-285.</li>
+                <li>Knapp, P., & Watkins, M. (2005). <em>Genre, Text, Grammar: Technologies for Describing and Teaching Text</em>. Sydney: University of New South Wales Press.</li>
+                <li>Anderson, M., & Anderson, K. (1997). <em>Text Types in English</em> (2nd ed.). London: Macmillan.</li>
+            </ul>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- UJI FORMATIF (FORMATIVE TEST) -->
+        <!-- ========================================================== -->
+        <section id="uji-formatif" class="border-t-4 border-luxury-gold pt-12" data-aos="fade-up">
+            <div class="text-center mb-10">
+                <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Evaluasi Pembelajaran</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-luxury-900 mt-4">📋 Uji Formatif Bab 10</h2>
+                <p class="text-slate-600 mt-2 max-w-2xl mx-auto">Uji pemahaman Anda tentang materi Procedure Text. Pastikan semua data dan jawaban terisi sebelum mengirimkan hasil.</p>
+            </div>
+
+            <form id="quizForm" class="max-w-4xl mx-auto space-y-8">
+                
+                <!-- Data Siswa -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-6 flex items-center">
+                        <i class="fas fa-user-graduate text-luxury-gold mr-3"></i> Data Siswa
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" id="nama" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" id="nis" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Tanggal <span class="text-red-500">*</span></label>
+                            <input type="date" id="tanggal" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <select id="kelas" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                                <option value="">Pilih Kelas</option>
+                                <option value="X TKJ 1">X TKJ 1</option>
+                                <option value="X TKJ 2">X TKJ 2</option>
+                                <option value="X AKL 1">X AKL 1</option>
+                                <option value="X AKL 2">X AKL 2</option>
+                                <option value="X OTKP 1">X OTKP 1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select id="semester" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                                <option value="Semester 1 (Ganjil)">Semester 1 (Ganjil)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-6 flex items-center">
+                        <i class="fas fa-list-ol text-luxury-gold mr-3"></i> Bagian A: Pilihan Ganda 
+                        <span class="ml-auto text-sm font-normal text-slate-500">(10 Soal x 10 Poin = 100)</span>
+                    </h3>
+                    <p class="text-red-600 text-sm mb-6 font-semibold"><i class="fas fa-exclamation-circle mr-1"></i> Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+                    <div class="space-y-6" id="mcq-container">
+                        <!-- Soal 1 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">1. Tujuan komunikatif dari Procedure Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. To describe a particular person or place in detail</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. To explain how to make or do something through a sequence of steps</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. To retell past events for the purpose of entertaining</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. To amuse readers with a story that has complications</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. To present two sides of an argument</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">2. Struktur umum (generic structure) Procedure Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Goal → Materials → Steps</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Orientation → Complication → Resolution</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Identification → Description</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Orientation → Events → Reorientation</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. General Classification → Description</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">3. Ciri kebahasaan yang paling dominan dalam Procedure Text adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Past tense dan figurative language</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Present continuous tense dan adjectives</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Imperative sentences, action verbs, dan temporal conjunctions</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Direct speech dan dialogue</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Comparative dan superlative adjectives</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">4. "Cut the beef into small pieces." Kalimat ini merupakan contoh dari...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Declarative sentence</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Interrogative sentence</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Exclamatory sentence</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Imperative sentence</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Conditional sentence</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">5. Kata-kata seperti <em>"first, then, next, finally"</em> dalam Procedure Text disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Action verbs</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Temporal conjunctions</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Adjectives</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Pronouns</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Prepositions</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">6. Menurut Speech Act Theory, kalimat imperatif dalam Procedure Text termasuk dalam jenis tindak tutur...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Directive (mengarahkan pembaca untuk melakukan sesuatu)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Expressive (menyatakan perasaan)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Representative (menyatakan keyakinan)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Commissive (berjanji)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Declaration (menyatakan sesuatu secara resmi)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">7. Manakah di bawah ini yang merupakan contoh Procedure Text jenis <em>Digital Tutorial</em>?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. "How to Make Rendang"</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. "The Legend of Lake Toba"</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. "How to Create a Website Using WordPress"</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. "My Holiday in Bali"</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. "My Beloved Cat Milo"</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">8. Menurut Cognitive Load Theory (Sweller, 1988), Procedure Text yang efektif harus...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Menggunakan bahasa yang sangat teknis dan rumit</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Menyajikan semua informasi dalam satu paragraf panjang</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Menggunakan sebanyak mungkin kata sifat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Menggunakan langkah-langkah yang pendek, jelas, dan berurutan untuk meminimalkan beban kognitif</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Tidak menggunakan nomor atau urutan</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">9. "Do not touch the hot surface." Kalimat ini merupakan contoh dari...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Positive imperative</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Negative imperative (prohibition)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Interrogative sentence</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Declarative sentence</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Conditional sentence</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">10. Teknik "Instruction Swap" dalam pembelajaran Procedure Text bertujuan untuk melatih...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Kejelasan dan ketepatan instruksi yang ditulis</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Kemampuan menghafal kosakata</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Keterampilan membaca cepat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Penguasaan past tense</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Kemampuan menulis puisi</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-6 flex items-center">
+                        <i class="fas fa-pen-fancy text-luxury-gold mr-3"></i> Bagian B: Essay 
+                        <span class="ml-auto text-sm font-normal text-slate-500">(5 Soal x 20 Poin = 100)</span>
+                    </h3>
+                    <p class="text-red-600 text-sm mb-6 font-semibold"><i class="fas fa-exclamation-circle mr-1"></i> Mohon isi semua 5 soal essay!</p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">1. Jelaskan tujuan komunikatif dan struktur umum (generic structure) dari Procedure Text! Berikan contoh singkat untuk masing-masing bagiannya!</label>
+                            <textarea name="essay1" required rows="3" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">2. Sebutkan dan jelaskan 5 ciri kebahasaan (language features) Procedure Text! Berikan masing-masing 1 contoh kalimat!</label>
+                            <textarea name="essay2" required rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">3. Berdasarkan Studi Kasus 10 (SOP yang Membingungkan), analisis kesalahan yang terjadi dan tuliskan ulang instruksi tersebut dalam bentuk Procedure Text yang benar (dalam bahasa Inggris)!</label>
+                            <textarea name="essay3" required rows="5" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">4. Jelaskan 3 jenis Procedure Text (Recipe, Manual, Digital Tutorial) dan berikan masing-masing 1 contoh topik yang relevan dengan kehidupan siswa SMK!</label>
+                            <textarea name="essay4" required rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">5. Tulislah sebuah Procedure Text lengkap (minimal 150 kata) tentang salah satu topik berikut: (a) "How to Make Nasi Goreng", atau (b) "How to Connect a Computer to a Wi-Fi Network". Pastikan teks memiliki struktur Goal → Materials → Steps dan menggunakan minimal 5 kalimat imperatif serta 3 temporal conjunctions!</label>
+                            <textarea name="essay5" required rows="8" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Aksi -->
+                <div class="bg-luxury-900 text-white p-8 rounded-2xl shadow-xl border border-luxury-gold/30 text-center">
+                    <h3 class="text-2xl font-serif font-bold text-luxury-gold mb-4">📊 Hasil Uji Formatif</h3>
+                    <div class="text-5xl font-bold text-white mb-2" id="totalScore">0</div>
+                    <p class="text-slate-400 mb-6 text-sm">Skor Pilihan Ganda: <span id="mcqScore">0</span>/100 | Skor Essay: <span id="essayScore">Dinilai Guru</span></p>
+                    
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <button type="button" onclick="hitungSkor()" class="bg-luxury-gold text-luxury-900 font-bold px-8 py-3 rounded-lg hover:bg-white transition-all duration-300 shadow-lg">
+                            <i class="fas fa-calculator mr-2"></i> Hitung Skor & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="border border-luxury-gold text-luxury-gold font-bold px-8 py-3 rounded-lg hover:bg-luxury-gold hover:text-luxury-900 transition-all duration-300">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Hasil ke Guru
+                        </button>
+                        <button type="button" onclick="window.print()" class="border border-slate-600 text-slate-300 font-semibold px-8 py-3 rounded-lg hover:border-white hover:text-white transition-all duration-300">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh / Cetak PDF
+                        </button>
+                        <button type="button" onclick="resetForm()" class="border border-red-500 text-red-400 font-semibold px-8 py-3 rounded-lg hover:bg-red-500 hover:text-white transition-all duration-300">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-6 italic">* Skor Essay akan dinilai secara manual oleh guru berdasarkan kedalaman jawaban dan ketepatan tata bahasa.</p>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- Footer Navigation -->
+        <div class="flex justify-between items-center mt-16 pt-8 border-t border-slate-200">
+            <a href="9.html" class="text-luxury-900 font-semibold hover:text-luxury-gold transition flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Bab 9: Narrative Text
+            </a>
+            <a href="11.html" class="bg-luxury-900 text-white px-6 py-3 rounded-lg hover:bg-luxury-gold hover:text-luxury-900 transition flex items-center font-semibold">
+                Bab 11: Announcement & Invitation <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-900 text-slate-400 py-10 border-t border-slate-800 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2">&copy; 2026 VERA SEPTIA FITRI, S.Pd — SMK N 1 KOTO BALINGKA</p>
+            <p class="text-sm text-slate-500">Email: <a href="mailto:ve.veraseptiafitri@gmail.com" class="hover:text-luxury-gold transition">ve.veraseptiafitri@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Kunci Jawaban Pilihan Ganda Bab 10
+        const correctAnswers = {
+            q1: 'b', q2: 'a', q3: 'c', q4: 'd', q5: 'b',
+            q6: 'a', q7: 'c', q8: 'd', q9: 'b', q10: 'a'
+        };
+
+        function hitungSkor() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const kelas = document.getElementById('kelas').value;
+
+            if (!nama || !nis || !tanggal || !kelas) {
+                alert("⚠️ Mohon lengkapi semua Data Siswa terlebih dahulu!");
+                return;
+            }
+
+            let mcqScore = 0;
+            let allMcqAnswered = true;
+            
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const questionDiv = document.querySelector(`input[name="q${i}"]`).closest('div[data-correct]');
+                
+                questionDiv.classList.remove('correct-answer', 'wrong-answer');
+                
+                if (selected) {
+                    if (selected.value === correctAnswers[`q${i}`]) {
+                        mcqScore += 10;
+                        questionDiv.classList.add('correct-answer');
+                    } else {
+                        questionDiv.classList.add('wrong-answer');
+                    }
+                } else {
+                    allMcqAnswered = false;
+                }
+            }
+
+            if (!allMcqAnswered) {
+                alert("⚠️ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!");
+                return;
+            }
+
+            let allEssayAnswered = true;
+            for (let i = 1; i <= 5; i++) {
+                if (document.querySelector(`textarea[name="essay${i}"]`).value.trim() === "") {
+                    allEssayAnswered = false;
+                    break;
+                }
+            }
+
+            if (!allEssayAnswered) {
+                alert("⚠️ Mohon isi semua 5 soal essay!");
+                return;
+            }
+
+            document.getElementById('mcqScore').innerText = mcqScore;
+            document.getElementById('totalScore').innerText = mcqScore;
+            document.getElementById('totalScore').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\n\nNama: ${nama}\nNIS: ${nis}\nSkor Pilihan Ganda: ${mcqScore}/100\n\nCatatan: Skor Essay akan dinilai oleh guru. Silakan klik "Kirim Hasil ke Guru" atau "Unduh / Cetak PDF".`);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const mcqScore = document.getElementById('mcqScore').innerText;
+
+            if (mcqScore === "0") {
+                alert("⚠️ Silakan hitung skor terlebih dahulu sebelum mengirim!");
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif Bab 10 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu VERA SEPTIA FITRI, S.Pd,\n\nBerikut adalah hasil Uji Formatif Bab 10 (Procedure Text) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${mcqScore}/100\n\nJawaban Essay telah saya isi pada lembar uji formatif terlampir (atau dapat dilihat pada sistem).\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:ve.veraseptiafitri@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if(confirm("Apakah Anda yakin ingin mengosongkan semua jawaban dan mulai ulang?")) {
+                document.getElementById("quizForm").reset();
+                document.getElementById('mcqScore').innerText = "0";
+                document.getElementById('totalScore').innerText = "0";
+                document.querySelectorAll('[data-correct]').forEach(div => {
+                    div.classList.remove('correct-answer', 'wrong-answer');
+                });
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
