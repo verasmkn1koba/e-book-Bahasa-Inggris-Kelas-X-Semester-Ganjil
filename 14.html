@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 14: Reading Comprehension & Vocabulary Enrichment - Bahasa Inggris Kelas X</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        luxury: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            gold: '#d4af37',
+                            goldLight: '#f3e5ab',
+                            cream: '#faf9f6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .correct-answer { background-color: #dcfce7 !important; border-color: #22c55e !important; }
+        .wrong-answer { background-color: #fee2e2 !important; border-color: #ef4444 !important; }
+        .reading-text {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.9;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body class="bg-luxury-cream text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-dark transition-all duration-300 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl md:text-2xl font-serif font-bold text-gold-gradient tracking-wide">
+                <i class="fas fa-book-open mr-2"></i>B. Inggris Kelas X
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-luxury-gold transition-colors">Beranda</a>
+                <a href="index.html#about" class="hover:text-luxury-gold transition-colors">Tentang</a>
+                <a href="index.html#toc" class="hover:text-luxury-gold transition-colors">Daftar Bab</a>
+                <a href="index.html#author" class="hover:text-luxury-gold transition-colors">Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="relative pt-32 pb-16 bg-luxury-900 text-white overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-luxury-gold/10 to-transparent"></div>
+        <div class="container mx-auto px-6 relative z-10" data-aos="fade-down">
+            <a href="index.html" class="inline-flex items-center text-luxury-gold hover:text-white transition-colors mb-6 text-sm font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i> Kembali ke Daftar Bab
+            </a>
+            <span class="bg-luxury-gold/20 text-luxury-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-luxury-gold/30">Pertemuan 14</span>
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6 leading-tight">
+                Bab 14: <span class="text-gold-gradient">Reading Comprehension & Vocabulary</span>
+            </h1>
+            <p class="text-slate-300 text-lg max-w-3xl leading-relaxed">
+                Menjelajahi dunia literasi melalui strategi <em>reading comprehension</em> yang efektif dan teknik <em>vocabulary enrichment</em> yang memperkaya kosakata. Bab ini membekali siswa dengan keterampilan membaca kritis dan kemampuan menguasai kosakata bahasa Inggris secara mandiri — fondasi penting untuk belajar sepanjang hayat.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="13.html" class="border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:border-luxury-gold hover:text-luxury-gold transition-all duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i> Bab Sebelumnya
+                </a>
+                <a href="#sub1" class="bg-luxury-gold text-luxury-900 font-bold px-6 py-3 rounded-lg hover:bg-white transition-all duration-300 shadow-lg shadow-luxury-gold/20">
+                    <i class="fas fa-book-reader mr-2"></i> Mulai Membaca
+                </a>
+                <a href="15.html" class="border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:border-luxury-gold hover:text-luxury-gold transition-all duration-300">
+                    Bab Selanjutnya <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="sub1" class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">Pendahuluan</h2>
+            <p class="text-slate-600 leading-relaxed mb-4 text-justify">
+                Membaca adalah jendela dunia — ungkapan ini semakin relevan di era informasi saat ini. Namun, kemampuan membaca saja tidak cukup. Kita perlu <strong>reading comprehension</strong> — kemampuan untuk memahami, menganalisis, dan mengevaluasi apa yang kita baca. Tanpa pemahaman yang baik, membaca hanya menjadi aktivitas mekanis tanpa makna.
+            </p>
+            <p class="text-slate-600 leading-relaxed mb-6 text-justify">
+                Di sisi lain, <strong>vocabulary</strong> (kosakata) adalah fondasi dari semua keterampilan berbahasa. Semakin kaya kosakata yang kita kuasai, semakin mudah kita memahami teks, mengekspresikan pikiran, dan berkomunikasi secara efektif. Bagi siswa SMK, penguasaan kosakata teknis bidang jurusan (TKJ, AKL, OTKP, dll.) juga menjadi kunci kesuksesan di dunia kerja.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl my-8">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-lightbulb mr-2"></i>🔑 Konsep Kunci</h3>
+                <ul class="list-disc list-inside text-blue-800 space-y-2 text-sm">
+                    <li><strong>Reading Comprehension:</strong> Kemampuan memahami, menafsirkan, dan mengevaluasi teks tertulis.</li>
+                    <li><strong>Reading Strategies:</strong> Teknik membaca seperti <em>skimming, scanning, inferencing, predicting</em>.</li>
+                    <li><strong>Vocabulary Enrichment:</strong> Proses memperkaya kosakata melalui berbagai teknik (context clues, word roots, synonyms/antonyms).</li>
+                    <li><strong>Context Clues:</strong> Menggunakan konteks kalimat untuk menebak makna kata yang tidak diketahui.</li>
+                    <li><strong>Schema Theory:</strong> Pengetahuan latar belakang pembaca mempengaruhi pemahaman teks.</li>
+                    <li><strong>Critical Reading:</strong> Membaca secara kritis — tidak hanya memahami, tetapi juga mengevaluasi dan menganalisis.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-16" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-panel p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-xl font-serif font-bold text-luxury-900 mb-4"><i class="fas fa-search text-luxury-gold mr-2"></i>📖 Studi Kasus 14: Siswa yang "Membaca" tapi Tidak Memahami</h3>
+                <p class="text-slate-600 mb-4 italic">
+                    "Seorang siswa SMK diminta membaca artikel tentang 'The Impact of Digital Technology on Vocational Education'. Ia membaca seluruh teks dari awal sampai akhir, tetapi ketika ditanya tentang ide pokok dan argumen penulis, ia tidak bisa menjawab. Ia hanya mampu menyebutkan beberapa kata yang ia kenali, tanpa memahami makna keseluruhan teks."
+                </p>
+                <div class="bg-luxury-gold/10 p-4 rounded-lg border border-luxury-gold/30">
+                    <p class="text-sm text-luxury-900 font-semibold">💡 Pembelajaran:</p>
+                    <p class="text-sm text-slate-700 mt-1">
+                        Siswa tersebut mengalami masalah <em>reading comprehension</em> — ia membaca kata per kata tanpa menggunakan strategi yang tepat. Ia tidak melakukan <em>skimming</em> untuk mendapatkan gambaran umum, tidak <em>scanning</em> untuk informasi spesifik, dan tidak menggunakan <em>context clues</em> untuk memahami kosakata baru. Contoh perbaikan: Sebelum membaca, siswa melakukan <em>preview</em> (membaca judul, subjudul, gambar). Saat membaca, ia menggunakan strategi <em>inferencing</em> untuk memahami makna tersirat. Setelah membaca, ia membuat <em>summary</em> untuk memastikan pemahaman.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">14.1 Landasan Teoretis</h2>
+            <p class="text-slate-600 mb-6">Pemahaman teori membantu siswa menyadari <em>mengapa</em> strategi membaca dan teknik penguasaan kosakata tertentu efektif.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Schema Theory (Rumelhart, 1980)</h4>
+                    <p class="text-sm text-slate-600">Teori ini menjelaskan bahwa pemahaman teks dipengaruhi oleh <em>schema</em> (pengetahuan latar belakang) pembaca. Semakin kaya schema yang dimiliki, semakin mudah memahami teks baru. Inilah mengapa <em>activating prior knowledge</em> menjadi langkah penting sebelum membaca.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Interactive Reading Model (Rumelhart & Stanovich, 1985)</h4>
+                    <p class="text-sm text-slate-600">Model ini menjelaskan bahwa membaca adalah proses interaktif antara <em>bottom-up processing</em> (dari huruf ke kata ke kalimat) dan <em>top-down processing</em> (dari pengetahuan latar belakang ke teks). Pembaca yang efektif menggunakan keduanya secara simultan.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">Nation's Vocabulary Framework (2001)</h4>
+                    <p class="text-sm text-slate-600">Paul Nation mengidentifikasi tiga aspek penguasaan kosakata: <em>form</em> (bentuk kata), <em>meaning</em> (makna), dan <em>use</em> (penggunaan). Menguasai kosakata bukan hanya menghafal arti, tetapi juga tahu cara menggunakannya dalam konteks yang tepat.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover-lift">
+                    <h4 class="font-bold text-lg text-luxury-900 mb-2">SQ3R Method (Robinson, 1946)</h4>
+                    <p class="text-sm text-slate-600">Metode SQ3R (Survey, Question, Read, Recite, Review) adalah strategi membaca komprehensif yang telah terbukti efektif selama puluhan tahun. Metode ini mengubah membaca dari aktivitas pasif menjadi aktif dan terstruktur.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Komponen Materi -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">14.2 Komponen Utama Reading Comprehension & Vocabulary</h2>
+            
+            <div class="space-y-8">
+                
+                <!-- Reading Strategies -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-strategy mr-2 text-luxury-gold"></i> A. Reading Strategies (Strategi Membaca)</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                                <h4 class="font-bold text-green-800 mb-2">🔍 Skimming</h4>
+                                <p class="text-sm text-green-700 mb-2">Membaca cepat untuk mendapatkan <strong>gambaran umum</strong> (main idea) teks.</p>
+                                <ul class="list-disc list-inside text-xs text-green-700 space-y-1">
+                                    <li>Baca judul, subjudul, paragraf pertama & terakhir</li>
+                                    <li>Perhatikan kata-kata yang dicetak tebal/miring</li>
+                                    <li>Gunakan untuk: preview teks, review materi</li>
+                                </ul>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <h4 class="font-bold text-blue-800 mb-2">🎯 Scanning</h4>
+                                <p class="text-sm text-blue-700 mb-2">Membaca cepat untuk menemukan <strong>informasi spesifik</strong>.</p>
+                                <ul class="list-disc list-inside text-xs text-blue-700 space-y-1">
+                                    <li>Gunakan kata kunci (keywords)</li>
+                                    <li>Gerakkan mata cepat melintasi teks</li>
+                                    <li>Gunakan untuk: mencari tanggal, nama, angka</li>
+                                </ul>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                                <h4 class="font-bold text-purple-800 mb-2">🧠 Inferencing</h4>
+                                <p class="text-sm text-purple-700 mb-2">Menarik kesimpulan dari informasi yang <strong>tersirat</strong> (tidak tertulis eksplisit).</p>
+                                <ul class="list-disc list-inside text-xs text-purple-700 space-y-1">
+                                    <li>Gunakan konteks + pengetahuan latar belakang</li>
+                                    <li>Baca "between the lines"</li>
+                                    <li>Contoh: "She grabbed her umbrella" → It was raining</li>
+                                </ul>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                                <h4 class="font-bold text-yellow-800 mb-2">🔮 Predicting</h4>
+                                <p class="text-sm text-yellow-700 mb-2">Memprediksi apa yang akan terjadi selanjutnya dalam teks.</p>
+                                <ul class="list-disc list-inside text-xs text-yellow-700 space-y-1">
+                                    <li>Berdasarkan judul, gambar, atau konteks</li>
+                                    <li>Membuat hipotesis sebelum membaca</li>
+                                    <li>Meningkatkan engagement dengan teks</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Types of Reading -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-book mr-2 text-luxury-gold"></i> B. Types of Reading (Jenis Membaca)</h3>
+                    </div>
+                    <div class="p-6 grid md:grid-cols-3 gap-6">
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-search-plus text-luxury-gold mr-2"></i> Intensive Reading</h4>
+                            <p class="text-sm text-slate-600 mb-2">Membaca <strong>detail dan teliti</strong> untuk pemahaman mendalam.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: Menganalisis teks akademik, mempelajari kontrak kerja</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-book-open text-luxury-gold mr-2"></i> Extensive Reading</h4>
+                            <p class="text-sm text-slate-600 mb-2">Membaca <strong>banyak teks</strong> untuk kesenangan dan fluency.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: Membaca novel, artikel berita, blog</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-luxury-900 mb-2"><i class="fas fa-brain text-luxury-gold mr-2"></i> Critical Reading</h4>
+                            <p class="text-sm text-slate-600 mb-2">Membaca secara <strong>kritis</strong> — mengevaluasi argumen dan bukti.</p>
+                            <p class="text-xs italic text-slate-500">Contoh: Menganalisis editorial, opini, research paper</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vocabulary Enrichment -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-spell-check mr-2 text-luxury-gold"></i> C. Vocabulary Enrichment Techniques</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-pink-50 p-4 rounded-lg border border-pink-200">
+                                <h4 class="font-bold text-pink-800 mb-2">1. Context Clues</h4>
+                                <p class="text-sm text-pink-700 mb-2">Menebak makna kata dari <strong>konteks kalimat</strong>.</p>
+                                <p class="text-xs italic text-pink-700">"The <em>arid</em> desert had no water for miles." → arid = dry</p>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                                <h4 class="font-bold text-indigo-800 mb-2">2. Word Roots & Affixes</h4>
+                                <p class="text-sm text-indigo-700 mb-2">Menganalisis <strong>akar kata, prefix, suffix</strong>.</p>
+                                <p class="text-xs italic text-indigo-700">"un-happy-ness" → un (not) + happy + ness (state)</p>
+                            </div>
+                            <div class="bg-teal-50 p-4 rounded-lg border border-teal-200">
+                                <h4 class="font-bold text-teal-800 mb-2">3. Synonyms & Antonyms</h4>
+                                <p class="text-sm text-teal-700 mb-2">Mempelajari <strong>persamaan dan lawan kata</strong>.</p>
+                                <p class="text-xs italic text-teal-700">big ↔ small, beautiful ↔ ugly, fast ↔ slow</p>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                                <h4 class="font-bold text-orange-800 mb-2">4. Word Families</h4>
+                                <p class="text-sm text-orange-700 mb-2">Mempelajari kata dalam <strong>keluarga kata</strong>.</p>
+                                <p class="text-xs italic text-orange-700">act (v) → action (n) → active (adj) → actively (adv)</p>
+                            </div>
+                            <div class="bg-cyan-50 p-4 rounded-lg border border-cyan-200">
+                                <h4 class="font-bold text-cyan-800 mb-2">5. Collocations</h4>
+                                <p class="text-sm text-cyan-700 mb-2">Mempelajari <strong>kata yang sering muncul bersama</strong>.</p>
+                                <p class="text-xs italic text-cyan-700">"make a decision" (bukan "do a decision")</p>
+                            </div>
+                            <div class="bg-rose-50 p-4 rounded-lg border border-rose-200">
+                                <h4 class="font-bold text-rose-800 mb-2">6. Technical Vocabulary</h4>
+                                <p class="text-sm text-rose-700 mb-2">Kosakata <strong>spesifik bidang</strong> (TKJ, AKL, OTKP).</p>
+                                <p class="text-xs italic text-rose-700">TKJ: router, bandwidth, protocol | AKL: ledger, debit, credit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQ3R Method -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                    <div class="bg-luxury-900 text-white p-4">
+                        <h3 class="text-xl font-bold"><i class="fas fa-list-check mr-2 text-luxury-gold"></i> D. SQ3R Method (Robinson, 1946)</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-5 gap-3">
+                            <div class="bg-luxury-gold/20 p-4 rounded-lg text-center border-2 border-luxury-gold">
+                                <p class="text-3xl font-bold text-luxury-900 mb-1">S</p>
+                                <p class="text-sm font-bold text-luxury-900">Survey</p>
+                                <p class="text-xs text-slate-600 mt-1">Tinjau judul, subjudul, gambar</p>
+                            </div>
+                            <div class="bg-luxury-gold/20 p-4 rounded-lg text-center border-2 border-luxury-gold">
+                                <p class="text-3xl font-bold text-luxury-900 mb-1">Q</p>
+                                <p class="text-sm font-bold text-luxury-900">Question</p>
+                                <p class="text-xs text-slate-600 mt-1">Buat pertanyaan dari judul</p>
+                            </div>
+                            <div class="bg-luxury-gold/20 p-4 rounded-lg text-center border-2 border-luxury-gold">
+                                <p class="text-3xl font-bold text-luxury-900 mb-1">R</p>
+                                <p class="text-sm font-bold text-luxury-900">Read</p>
+                                <p class="text-xs text-slate-600 mt-1">Baca untuk menjawab pertanyaan</p>
+                            </div>
+                            <div class="bg-luxury-gold/20 p-4 rounded-lg text-center border-2 border-luxury-gold">
+                                <p class="text-3xl font-bold text-luxury-900 mb-1">R</p>
+                                <p class="text-sm font-bold text-luxury-900">Recite</p>
+                                <p class="text-xs text-slate-600 mt-1">Ucapkan kembali dengan kata sendiri</p>
+                            </div>
+                            <div class="bg-luxury-gold/20 p-4 rounded-lg text-center border-2 border-luxury-gold">
+                                <p class="text-3xl font-bold text-luxury-900 mb-1">R</p>
+                                <p class="text-sm font-bold text-luxury-900">Review</p>
+                                <p class="text-xs text-slate-600 mt-1">Tinjau ulang untuk penguatan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contoh Teks Reading -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">14.3 Contoh Teks Reading dengan Pertanyaan Komprehensi</h2>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+                <div class="bg-luxury-900 text-white p-4">
+                    <h3 class="text-xl font-bold"><i class="fas fa-newspaper mr-2 text-luxury-gold"></i> Reading Text: "The Global Recognition of Rendang"</h3>
+                </div>
+                <div class="p-6">
+                    <div class="reading-text text-slate-700 mb-6">
+                        <p class="mb-4">Rendang, a traditional dish from the Minangkabau region of West Sumatra, Indonesia, has gained <strong>international acclaim</strong> in recent years. In 2011, CNN International voted rendang as the <em>world's most delicious food</em> in their "World's 50 Best Foods" list, a recognition that was repeated in 2018.</p>
+                        
+                        <p class="mb-4">The dish consists of meat — typically beef — that is slow-cooked in coconut milk and a mixture of spices including lemongrass, galangal, garlic, shallots, ginger, and chili. The cooking process, known as <em>marandang</em>, can take anywhere from four to eight hours, requiring patience and careful attention to prevent the meat from burning while allowing the flavors to <em>meld</em> perfectly.</p>
+                        
+                        <p class="mb-4">Beyond its culinary appeal, rendang holds deep cultural significance for the Minangkabau people. Each ingredient symbolizes an aspect of their society: the meat represents the leaders (Niniak Mamak), the coconut milk symbolizes the intellectuals (Cadiak Pandai), the chili represents religious scholars (Alim Ulama), and the spice mixture symbolizes the broader community.</p>
+                        
+                        <p>The global recognition of rendang has had a significant impact on Indonesian tourism and the local economy. Many restaurants specializing in rendang have emerged in major cities worldwide, from Amsterdam to New York. Furthermore, the Indonesian government has leveraged this recognition to promote culinary tourism, attracting visitors who wish to experience authentic Minangkabau cuisine in its place of origin.</p>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 mb-4">
+                        <p class="text-xs font-bold text-blue-800 mb-2">📝 COMPREHENSION QUESTIONS</p>
+                        <ol class="text-sm text-slate-700 space-y-2 list-decimal list-inside">
+                            <li>What is the main idea of the text?</li>
+                            <li>Why did CNN International recognize rendang?</li>
+                            <li>What does the word <em>"meld"</em> in paragraph 2 mean? (Use context clues)</li>
+                            <li>What cultural significance does rendang have for the Minangkabau people?</li>
+                            <li>What is the impact of rendang's global recognition on Indonesia?</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                        <p class="text-xs font-bold text-green-800 mb-2">🔑 VOCABULARY ENRICHMENT</p>
+                        <div class="grid md:grid-cols-2 gap-3 text-sm">
+                            <div>
+                                <p><strong>acclaim</strong> (n) = recognition, praise</p>
+                                <p><strong>meld</strong> (v) = blend, combine</p>
+                                <p><strong>leverage</strong> (v) = use effectively</p>
+                            </div>
+                            <div>
+                                <p><strong>culinary</strong> (adj) = related to cooking</p>
+                                <p><strong>authentic</strong> (adj) = genuine, real</p>
+                                <p><strong>significance</strong> (n) = importance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teknik Inovatif -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-luxury-900 mb-6 border-l-4 border-luxury-gold pl-4">14.4 Teknik Inovatif & Tips Praktis</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-puzzle-piece text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Jigsaw Reading</h4>
+                    <p class="text-sm text-slate-300">Siswa dibagi menjadi kelompok. Setiap anggota membaca bagian berbeda dari teks, lalu mengajarkan bagiannya kepada anggota lain. Melatih kolaborasi dan pemahaman mendalam.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-book-bookmark text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Vocabulary Journal</h4>
+                    <p class="text-sm text-slate-300">Siswa membuat jurnal kosakata pribadi: setiap hari mencatat 5 kata baru dari bacaan, menuliskan makna, sinonim, dan contoh kalimat. Melatih kemandirian belajar.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-users text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Reading Circles</h4>
+                    <p class="text-sm text-slate-300">Siswa berperan sebagai Summarizer, Word Master, Discussion Leader, atau Passage Person dalam diskusi kelompok tentang teks. Melatih berbagai keterampilan membaca.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-highlighter text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Context Clue Detective</h4>
+                    <p class="text-sm text-slate-300">Siswa menjadi "detektif" yang mencari makna kata tidak dikenal dari konteks kalimat. Melatih inferencing dan critical thinking.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-pen-fancy text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">SQ3R Practice</h4>
+                    <p class="text-sm text-slate-300">Siswa menerapkan metode SQ3R pada teks akademik atau teknis sesuai jurusan mereka. Melatih reading strategies yang terstruktur.</p>
+                </div>
+                <div class="bg-luxury-900 text-white p-6 rounded-xl shadow-lg">
+                    <i class="fas fa-globe text-3xl text-luxury-gold mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">News Article Analysis</h4>
+                    <p class="text-sm text-slate-300">Siswa membaca artikel berita berbahasa Inggris tentang isu terkini, lalu menganalisis ide pokok, argumen, dan kosakata teknis. Relevan dengan kehidupan digital.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kesimpulan -->
+        <section class="mb-16 bg-luxury-gold/10 p-8 rounded-2xl border border-luxury-gold/30" data-aos="fade-up">
+            <h2 class="text-2xl font-serif font-bold text-luxury-900 mb-4">Kesimpulan</h2>
+            <p class="text-slate-700 leading-relaxed mb-4">
+                <strong>Reading Comprehension</strong> dan <strong>Vocabulary Enrichment</strong> adalah dua keterampilan yang saling melengkapi dalam pembelajaran bahasa Inggris. Reading comprehension tanpa vocabulary yang memadai akan terhambat; sebaliknya, vocabulary yang kaya tanpa strategi membaca yang tepat tidak akan optimal. Kunci utama adalah: <strong>strategi membaca yang tepat</strong> (skimming, scanning, inferencing, predicting), <strong>teknik penguasaan kosakata yang efektif</strong> (context clues, word roots, collocations), dan <strong>praktik membaca yang konsisten</strong>.
+            </p>
+            <p class="text-slate-700 leading-relaxed">
+                Bagi siswa SMK N 1 Koto Balingka, menguasai kedua keterampilan ini bukan hanya tentang lulus ujian, tetapi juga tentang mempersiapkan diri untuk dunia kerja dan belajar sepanjang hayat. Di era informasi, kemampuan membaca kritis dan menguasai kosakata teknis bidang jurusan adalah aset yang tak ternilai. Dengan berlatih melalui teknik Jigsaw Reading, Vocabulary Journal, Reading Circles, dan SQ3R Practice, siswa akan siap menjadi pembaca yang kritis dan komunikator yang handal.
+            </p>
+        </section>
+
+        <!-- Daftar Pustaka -->
+        <section class="mb-20" data-aos="fade-up">
+            <h3 class="text-xl font-bold text-luxury-900 mb-4">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                <li>Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi. (2021). <em>Buku Panduan Guru Bahasa Inggris: Work in Progress! untuk SMA/SMK Kelas X</em>. Jakarta: Kemendikbudristek.</li>
+                <li>Rumelhart, D. E. (1980). Schemata: The building blocks of cognition. In R. J. Spiro et al. (Eds.), <em>Theoretical Issues in Reading Comprehension</em>. Hillsdale, NJ: Erlbaum.</li>
+                <li>Rumelhart, D. E., & Stanovich, K. E. (1985). Reading: A model of cognitive processes. In R. J. Sternberg & E. E. Smith (Eds.), <em>The Psychology of Human Thought</em>. Cambridge: Cambridge University Press.</li>
+                <li>Nation, I. S. P. (2001). <em>Learning Vocabulary in Another Language</em>. Cambridge: Cambridge University Press.</li>
+                <li>Robinson, F. P. (1946). <em>Effective Study</em>. New York: Harper & Row.</li>
+                <li>Grabe, W., & Stoller, F. L. (2019). <em>Teaching and Researching Reading</em> (3rd ed.). New York: Routledge.</li>
+                <li>Harmer, J. (2007). <em>The Practice of English Language Teaching</em> (4th ed.). Harlow: Pearson Education.</li>
+            </ul>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- UJI FORMATIF (FORMATIVE TEST) -->
+        <!-- ========================================================== -->
+        <section id="uji-formatif" class="border-t-4 border-luxury-gold pt-12" data-aos="fade-up">
+            <div class="text-center mb-10">
+                <span class="bg-luxury-900 text-luxury-gold text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Evaluasi Pembelajaran</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-luxury-900 mt-4">📋 Uji Formatif Bab 14</h2>
+                <p class="text-slate-600 mt-2 max-w-2xl mx-auto">Uji pemahaman Anda tentang materi Reading Comprehension & Vocabulary Enrichment. Pastikan semua data dan jawaban terisi sebelum mengirimkan hasil.</p>
+            </div>
+
+            <form id="quizForm" class="max-w-4xl mx-auto space-y-8">
+                
+                <!-- Data Siswa -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-6 flex items-center">
+                        <i class="fas fa-user-graduate text-luxury-gold mr-3"></i> Data Siswa
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" id="nama" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" id="nis" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Tanggal <span class="text-red-500">*</span></label>
+                            <input type="date" id="tanggal" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <select id="kelas" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                                <option value="">Pilih Kelas</option>
+                                <option value="X TKJ 1">X TKJ 1</option>
+                                <option value="X TKJ 2">X TKJ 2</option>
+                                <option value="X AKL 1">X AKL 1</option>
+                                <option value="X AKL 2">X AKL 2</option>
+                                <option value="X OTKP 1">X OTKP 1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select id="semester" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition">
+                                <option value="Semester 1 (Ganjil)">Semester 1 (Ganjil)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-6 flex items-center">
+                        <i class="fas fa-list-ol text-luxury-gold mr-3"></i> Bagian A: Pilihan Ganda 
+                        <span class="ml-auto text-sm font-normal text-slate-500">(10 Soal x 10 Poin = 100)</span>
+                    </h3>
+                    <p class="text-red-600 text-sm mb-6 font-semibold"><i class="fas fa-exclamation-circle mr-1"></i> Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+                    <div class="space-y-6" id="mcq-container">
+                        <!-- Soal 1 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">1. Strategi membaca cepat untuk mendapatkan gambaran umum (main idea) suatu teks disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Scanning</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Skimming</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Inferencing</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Predicting</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q1" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Critical reading</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">2. Strategi membaca cepat untuk menemukan informasi spesifik (seperti tanggal, nama, angka) disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Scanning</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Skimming</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Extensive reading</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Intensive reading</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q2" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Critical reading</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">3. Menurut Schema Theory (Rumelhart, 1980), pemahaman teks dipengaruhi oleh...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Jumlah kata yang dibaca</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Kecepatan membaca</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Pengetahuan latar belakang (schema) pembaca</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Panjang teks</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q3" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Jumlah gambar dalam teks</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">4. Teknik menebak makna kata dari konteks kalimat disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Word roots</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Collocations</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Synonyms</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Context clues</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q4" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Antonyms</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">5. Dalam metode SQ3R, huruf "Q" singkatan dari...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Quiz</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Question</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Quote</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Quick</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q5" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Quality</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">6. Berdasarkan teks "The Global Recognition of Rendang", apa ide pokok paragraf pertama?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Rendang telah mendapatkan pengakuan internasional sebagai makanan terenak di dunia</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Rendang adalah makanan yang mahal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. CNN adalah saluran televisi Amerika</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Minangkabau adalah daerah di Sumatra</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q6" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Rendang terbuat dari daging sapi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="c">
+                            <p class="font-semibold text-slate-800 mb-3">7. Dalam teks "The Global Recognition of Rendang", kata <em>"meld"</em> pada paragraf 2 paling dekat maknanya dengan...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Separate (memisahkan)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Destroy (menghancurkan)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Blend/Combine (mencampur/menyatu)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Burn (membakar)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q7" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Freeze (membekukan)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="d">
+                            <p class="font-semibold text-slate-800 mb-3">8. Menurut Nation's Vocabulary Framework (2001), tiga aspek penguasaan kosakata adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Reading, Writing, Speaking</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Listening, Speaking, Grammar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Spelling, Pronunciation, Meaning</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Form, Meaning, Use</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q8" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Noun, Verb, Adjective</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="b">
+                            <p class="font-semibold text-slate-800 mb-3">9. Jenis membaca yang dilakukan secara detail dan teliti untuk pemahaman mendalam disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Extensive reading</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Intensive reading</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Skimming</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Scanning</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q9" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Speed reading</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200" data-correct="a">
+                            <p class="font-semibold text-slate-800 mb-3">10. Teknik "Jigsaw Reading" dalam pembelajaran bertujuan untuk...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="a" class="text-luxury-gold focus:ring-luxury-gold"> <span>a. Melatih kolaborasi dan pemahaman mendalam melalui pembagian bagian teks</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="b" class="text-luxury-gold focus:ring-luxury-gold"> <span>b. Menghafal kosakata</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="c" class="text-luxury-gold focus:ring-luxury-gold"> <span>c. Menerjemahkan teks</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="d" class="text-luxury-gold focus:ring-luxury-gold"> <span>d. Menulis puisi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-white transition"><input type="radio" name="q10" value="e" class="text-luxury-gold focus:ring-luxury-gold"> <span>e. Membaca cepat</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                    <h3 class="text-xl font-bold text-luxury-900 mb-6 flex items-center">
+                        <i class="fas fa-pen-fancy text-luxury-gold mr-3"></i> Bagian B: Essay 
+                        <span class="ml-auto text-sm font-normal text-slate-500">(5 Soal x 20 Poin = 100)</span>
+                    </h3>
+                    <p class="text-red-600 text-sm mb-6 font-semibold"><i class="fas fa-exclamation-circle mr-1"></i> Mohon isi semua 5 soal essay!</p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">1. Jelaskan perbedaan antara <em>skimming</em> dan <em>scanning</em>! Berikan masing-masing 2 contoh situasi ketika strategi tersebut paling tepat digunakan!</label>
+                            <textarea name="essay1" required rows="3" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">2. Berdasarkan Schema Theory (Rumelhart, 1980), jelaskan mengapa pengetahuan latar belakang (schema) sangat penting dalam reading comprehension! Berikan contoh konkret bagaimana schema mempengaruhi pemahaman teks!</label>
+                            <textarea name="essay2" required rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">3. Jelaskan 6 teknik vocabulary enrichment (context clues, word roots, synonyms/antonyms, word families, collocations, technical vocabulary)! Berikan masing-masing 1 contoh kalimat!</label>
+                            <textarea name="essay3" required rows="5" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">4. Berdasarkan teks "The Global Recognition of Rendang", jawablah pertanyaan berikut: (a) Apa ide pokok paragraf 3? (b) Apa makna tersirat (inference) dari fakta bahwa rendang diakui dunia? (c) Sebutkan 3 kosakata baru dari teks beserta maknanya!</label>
+                            <textarea name="essay4" required rows="5" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-800 mb-2">5. Terapkan metode SQ3R (Survey, Question, Read, Recite, Review) pada sebuah artikel berita berbahasa Inggris yang Anda pilih. Tuliskan langkah-langkah yang Anda lakukan di setiap tahap, dan jelaskan bagaimana metode ini membantu pemahaman Anda!</label>
+                            <textarea name="essay5" required rows="7" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-luxury-gold focus:border-luxury-gold outline-none transition" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Aksi -->
+                <div class="bg-luxury-900 text-white p-8 rounded-2xl shadow-xl border border-luxury-gold/30 text-center">
+                    <h3 class="text-2xl font-serif font-bold text-luxury-gold mb-4">📊 Hasil Uji Formatif</h3>
+                    <div class="text-5xl font-bold text-white mb-2" id="totalScore">0</div>
+                    <p class="text-slate-400 mb-6 text-sm">Skor Pilihan Ganda: <span id="mcqScore">0</span>/100 | Skor Essay: <span id="essayScore">Dinilai Guru</span></p>
+                    
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <button type="button" onclick="hitungSkor()" class="bg-luxury-gold text-luxury-900 font-bold px-8 py-3 rounded-lg hover:bg-white transition-all duration-300 shadow-lg">
+                            <i class="fas fa-calculator mr-2"></i> Hitung Skor & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="border border-luxury-gold text-luxury-gold font-bold px-8 py-3 rounded-lg hover:bg-luxury-gold hover:text-luxury-900 transition-all duration-300">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Hasil ke Guru
+                        </button>
+                        <button type="button" onclick="window.print()" class="border border-slate-600 text-slate-300 font-semibold px-8 py-3 rounded-lg hover:border-white hover:text-white transition-all duration-300">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh / Cetak PDF
+                        </button>
+                        <button type="button" onclick="resetForm()" class="border border-red-500 text-red-400 font-semibold px-8 py-3 rounded-lg hover:bg-red-500 hover:text-white transition-all duration-300">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-6 italic">* Skor Essay akan dinilai secara manual oleh guru berdasarkan kedalaman jawaban dan ketepatan tata bahasa.</p>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- Footer Navigation -->
+        <div class="flex justify-between items-center mt-16 pt-8 border-t border-slate-200">
+            <a href="13.html" class="text-luxury-900 font-semibold hover:text-luxury-gold transition flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Bab 13: Short Functional Texts
+            </a>
+            <a href="15.html" class="bg-luxury-900 text-white px-6 py-3 rounded-lg hover:bg-luxury-gold hover:text-luxury-900 transition flex items-center font-semibold">
+                Bab 15: Comprehensive Review <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-900 text-slate-400 py-10 border-t border-slate-800 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2">&copy; 2026 VERA SEPTIA FITRI, S.Pd — SMK N 1 KOTO BALINGKA</p>
+            <p class="text-sm text-slate-500">Email: <a href="mailto:ve.veraseptiafitri@gmail.com" class="hover:text-luxury-gold transition">ve.veraseptiafitri@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Kunci Jawaban Pilihan Ganda Bab 14
+        const correctAnswers = {
+            q1: 'b', q2: 'a', q3: 'c', q4: 'd', q5: 'b',
+            q6: 'a', q7: 'c', q8: 'd', q9: 'b', q10: 'a'
+        };
+
+        function hitungSkor() {
+            // Validasi Data Siswa
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const kelas = document.getElementById('kelas').value;
+
+            if (!nama || !nis || !tanggal || !kelas) {
+                alert("⚠️ Mohon lengkapi semua Data Siswa terlebih dahulu!");
+                return;
+            }
+
+            // Validasi Pilihan Ganda
+            let mcqScore = 0;
+            let allMcqAnswered = true;
+            
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const questionDiv = document.querySelector(`input[name="q${i}"]`).closest('div[data-correct]');
+                
+                // Reset classes
+                questionDiv.classList.remove('correct-answer', 'wrong-answer');
+                
+                if (selected) {
+                    if (selected.value === correctAnswers[`q${i}`]) {
+                        mcqScore += 10;
+                        questionDiv.classList.add('correct-answer');
+                    } else {
+                        questionDiv.classList.add('wrong-answer');
+                    }
+                } else {
+                    allMcqAnswered = false;
+                }
+            }
+
+            if (!allMcqAnswered) {
+                alert("⚠️ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!");
+                return;
+            }
+
+            // Validasi Essay (Cek apakah ada yang kosong)
+            let allEssayAnswered = true;
+            for (let i = 1; i <= 5; i++) {
+                if (document.querySelector(`textarea[name="essay${i}"]`).value.trim() === "") {
+                    allEssayAnswered = false;
+                    break;
+                }
+            }
+
+            if (!allEssayAnswered) {
+                alert("⚠️ Mohon isi semua 5 soal essay!");
+                return;
+            }
+
+            // Tampilkan Hasil
+            document.getElementById('mcqScore').innerText = mcqScore;
+            document.getElementById('totalScore').innerText = mcqScore;
+            
+            // Scroll ke hasil
+            document.getElementById('totalScore').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\n\nNama: ${nama}\nNIS: ${nis}\nSkor Pilihan Ganda: ${mcqScore}/100\n\nCatatan: Skor Essay akan dinilai oleh guru. Silakan klik "Kirim Hasil ke Guru" atau "Unduh / Cetak PDF".`);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const mcqScore = document.getElementById('mcqScore').innerText;
+
+            if (mcqScore === "0") {
+                alert("⚠️ Silakan hitung skor terlebih dahulu sebelum mengirim!");
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif Bab 14 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu VERA SEPTIA FITRI, S.Pd,\n\nBerikut adalah hasil Uji Formatif Bab 14 (Reading Comprehension & Vocabulary Enrichment) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${mcqScore}/100\n\nJawaban Essay telah saya isi pada lembar uji formatif terlampir (atau dapat dilihat pada sistem).\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:ve.veraseptiafitri@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if(confirm("Apakah Anda yakin ingin mengosongkan semua jawaban dan mulai ulang?")) {
+                document.getElementById("quizForm").reset();
+                document.getElementById('mcqScore').innerText = "0";
+                document.getElementById('totalScore').innerText = "0";
+                
+                // Hapus highlight warna
+                document.querySelectorAll('[data-correct]').forEach(div => {
+                    div.classList.remove('correct-answer', 'wrong-answer');
+                });
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
